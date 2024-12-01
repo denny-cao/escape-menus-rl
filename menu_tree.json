@@ -1,0 +1,301 @@
+{
+    "id": 1,
+    "text": "Main Menu",
+    "is_target": false,
+    "children": [
+        {
+            "id": 2,
+            "text": "Option",
+            "is_target": false,
+            "children": [
+                {
+                    "id": 3,
+                    "text": "Option",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "id": 4,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 5,
+                                    "text": "Target",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "id": 6,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 7,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": 5,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 6,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 7,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 8,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 7,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 8,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "text": "Option",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "id": 5,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 6,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 7,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 7,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 8,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "text": "Option",
+            "is_target": false,
+            "children": [
+                {
+                    "id": 4,
+                    "text": "Option",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "id": 5,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 6,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 7,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 8,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 7,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 8,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "text": "Option",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "id": 6,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 7,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 8,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 9,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 8,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 9,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 10,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "text": "Option",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "id": 7,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 8,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 9,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": 8,
+                            "text": "Option",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "id": 9,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 10,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                },
+                                {
+                                    "id": 11,
+                                    "text": "Option",
+                                    "is_target": false,
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
