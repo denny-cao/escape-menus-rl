@@ -32,11 +32,11 @@ class MenuTree:
     @staticmethod
     def generate_menu_text(path, sibling_texts, is_target=False, is_root=False):
         if is_root:
-            return ""  # Root node has no text
+            return "Main Menu"  # Root node has no text
     
         try:
             prompt = (
-                f"You are generating a menu item for a call center system in the form of a tree. Pick a random choic e for the company/field and then generate a menu item name for the current node given the context of path and siblings. The menu item should be concise and unique."
+                f"You are generating a menu item for a call center system in the form of a tree. Pick a random choice for the company/field and then generate a menu item name for the current node given the context of path and siblings. The menu item should be concise and unique."
                 f"Current path: {' > '.join(path) if path else 'Root'}. "
                 f"Siblings: {', '.join(sibling_texts) if sibling_texts else 'None'}. "
                 f"{'This node will reach human assistance (The goal state of the tree), but we wish to convey this subtlely.' if is_target else ''} "
