@@ -5,29 +5,29 @@
     "children": [
         {
             "number": 1,
-            "text": "For customer service representative, press 1.",
+            "text": "For option 1, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For queries related to your existing account, press 1.",
+                    "text": "For option 1, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For password reset issues, press 1.",
+                            "text": "For option 1, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For account balance inquiries, press 2.",
+                            "text": "For option 2, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For account deactivation requests, press 3.",
+                            "text": "For option 3, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -35,24 +35,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For product related information, press 2.",
+                    "text": "For option 2, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For product usage instructions, press 1.",
+                            "text": "For option 1, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For product warranty details, press 2.",
+                            "text": "For option 2, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For information about product accessories, press 3.",
+                            "text": "For option 3, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -60,24 +60,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "To speak directly with a customer service representative, press 3.",
+                    "text": "For option 3, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For queries related to your existing orders, press 1.",
+                            "text": "For option 1, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To report an issue with our service, press 2.",
+                            "text": "For option 2, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For general information about our products and services, press 3.",
+                            "text": "For option 3, press 3.",
                             "is_target": false,
                             "children": []
                         }
