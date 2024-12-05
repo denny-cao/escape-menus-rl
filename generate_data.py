@@ -6,7 +6,7 @@ import openai
 from pydantic import BaseModel, ValidationError
 
 # Set your OpenAI API key
-
+openai.api_key = 'SECRET'
 if not openai.api_key:
     raise ValueError("OPENAI_API_KEY is not set. Please set it in your environment variables.")
 
@@ -173,8 +173,8 @@ def export_menu_tree_to_json(tree: MenuNode, filename: str):
 # Main script
 if __name__ == "__main__":
     # Define tree parameters
-    tree_depth = 5
-    branching_factor = 4
+    tree_depth = 4
+    branching_factor = 3
     target_number = 1  # Number of target nodes at each branching
 
     # Generate the menu tree
@@ -185,4 +185,4 @@ if __name__ == "__main__":
     )
 
     # Export to JSON
-    export_menu_tree_to_json(menu_tree, "menu_tree3.json")
+    export_menu_tree_to_json(menu_tree, "menu_tree4.json")
