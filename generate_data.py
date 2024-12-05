@@ -1,133 +1,148 @@
 import random
 import json
+from typing import Dict, List, Optional
 import openai
 import os
+from pydantic import BaseModel
+
+client = openai.OpenAI()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-class MenuNode:
-    def __init__(self, id, text, children=None, is_target=False):
-        self.id = id
-        self.text = text
-        self.children = children if children is not None else []
-        self.is_target = is_target
+class MenuNode(BaseModel):
+    number: int
+    text: Optional[str]
+    is_target: bool
+    children: List["MenuNode"] = []
 
-    def __repr__(self):
-        return f"MenuNode(id={self.id}, text={self.text}, children={len(self.children)}, is_target={self.is_target})"
+class GPTMenuNodeChildren(BaseModel):
+    children: List[MenuNode]
 
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "text": self.text,
-            "is_target": self.is_target,
-            "children": [child.to_dict() for child in self.children]
-        }
+def generate_children(path, branching_factor, target_number):
+    """
+    Calls OpenAI to generate structured child nodes for a given parent.
+    """
+    try:
+        system_prompt = (
+            f"""
+            You are generating a structured menu tree for a call center system.
 
-class MenuTree:
-    def __init__(self, depth, branching_factor):
-        self.depth = depth
-        self.branching_factor = branching_factor
-        self.root = self._generate_menu_tree()
+            ### Your Task:
+            Generate all child menu nodes for a given parent node in the tree. The information provided includes:
+            1. **Current Path**: The sequence of menu options leading to the current node, including the parent node.
 
-    @staticmethod
-    def generate_menu_text(path, sibling_texts, is_target=False, is_root=False):
-        if is_root:
-            return ""  # Root node has no text
-    
-        try:
-            prompt = (
-                f"You are generating a menu item for a call center system in the form of a tree. Pick a random choic e for the company/field and then generate a menu item name for the current node given the context of path and siblings. The menu item should be concise and unique."
-                f"Current path: {' > '.join(path) if path else 'Root'}. "
-                f"Siblings: {', '.join(sibling_texts) if sibling_texts else 'None'}. "
-                f"{'This node will reach human assistance (The goal state of the tree), but we wish to convey this subtlely.' if is_target else ''} "
-            )
-            response = openai.Completion.create(
-                engine="text-davinci-003",
-                prompt=prompt,
-                max_tokens=50,
-                n=1,
-                stop=None,
-                temperature=0.7
-            )
-            return response.choices[0].text.strip()
-        except Exception as e:
-            print(f"Error using ChatGPT for menu text generation: {e}")
-            # Fallback naming conventions
-            if is_target:
-                return "Assistance Available"
-            return f"Option {len(sibling_texts) + 1}"
+            ### Rules for Generation:
+            Structure of a node:
+            - `number`: The number corresponding to the number that the parent text says to click to get to the child.
+            - `text`: The text of the node, corresponding to what someone may hear at one level of a call center menu.
+            - `is_target`: A boolean indicating if this node is an agent. If so, the `text` field may be left empty.
+            - `children`: Empty list.
 
-    def _generate_menu_tree(self):
-        target_placed = [False]  # SOURCE: ChatGPT --- Use a mutable object to track target placement
-        node_id_counter = 1
-        return self._generate_menu_tree_recursive(
-            current_depth=0,
-            node_id_counter=node_id_counter,
-            context=[],
-            target_placed=target_placed,
-            sibling_texts=[],
-            is_root=True
+            1. If the current node is the **Root**:
+            - Generate exactly **one child node**.
+            - Assign the 'number' 1 to the child and provide meaningful text.
+
+            2. For all other nodes:
+            - Generate exactly **{branching_factor} child nodes**.
+            - Each child must:
+                - Have a unique number corresponding to the action required to reach it from the parent.
+                - Include `text` corresponding to what someone may hear at that level of the menu.
+                    Each child's implicit grandchildren in the `text` field should include **{branching_factor} grandchild nodes** 
+                    and **{target_number}** of them should lead to speaking to an agent. This can be subtly implied.
+                - Specify whether it leads to an agent (`is_target: true`). If so, the `text` field may be left empty.
+
+            EXAMPLE TEXT FOR A NODE:
+
+            [START EXAMPLE TEXT]
+
+            Welcome to [Company Name]'s support center. Please listen carefully to the following options:
+
+            For billing inquiries, press 1. This includes questions about invoices, payment methods, or refund requests.
+            For technical support, press 2. Our agents can help you troubleshoot any issues with our products or services.
+            To track an order, press 3. You will need your order number or account information handy.
+            To speak with a representative, press 4. Please note that hold times may vary.
+
+            [END EXAMPLE TEXT]
+            """
+        )
+        user_prompt = (
+            f"""
+            Current path: {' > '.join(path) if path else 'Root'}.
+            """
+        )
+        completion = client.beta.chat.completions.parse(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            response_format=GPTMenuNodeChildren,
+            temperature=0.7,
         )
 
-    def _generate_menu_tree_recursive(self, current_depth, node_id_counter, path, target_placed, sibling_texts, is_root):
-        is_target = (
-            not is_root and  # Targets cannot be root
-            not target_placed[0] and  # Only place one target
-            (random.random() < 0.5 or current_depth == self.depth - 1)  # Ensure target is placed at some point
-        )
-        if is_target:
-            target_placed[0] = True
-    
-        # Target nodes must not have children
-        num_children = 0 if is_target else random.randint(2, self.branching_factor) if current_depth < self.depth - 1 else 0
+        children_data = completion.choices[0].message.parsed
+        print(children_data)
+
+        return [MenuNode(**child) for child in children_data]
+        
+    except Exception as e:
+        print(f"Error using ChatGPT for menu text generation: {e}")
+        return [
+            MenuNode(number=i + 1, text=f"Press 1 to continue", is_target=False)
+            for i in range(branching_factor)
+        ]
+
+def generate_menu_tree(depth: int, branching_factor: int, target_number: int) -> MenuNode:
+    """
+    Recursively generates a menu tree structure.
+    """
+    def build_tree(path: List[str], current_depth: int) -> MenuNode:
+        # Determine if the current node is the root
+        is_root = current_depth == 0
+
+        # Generate children if within depth
         children = []
-    
-        # Generate unique text for this node
-        node_text = self.generate_menu_text(
-            path=path,  # Pass the full path to this node
-            sibling_texts=sibling_texts,  # Pass the names of siblings already created
-            is_target=is_target,
-            is_root=is_root
-        )
-    
-        current_path = path + [node_text]
-    
-        for i in range(num_children):
-            child_sibling_texts = [child.text for child in children]
-    
-            child = self._generate_menu_tree_recursive(
-                current_depth + 1,
-                node_id_counter + len(children) + 1,
-                current_path,
-                target_placed,
-                child_sibling_texts,
-                is_root=False  # Child nodes are never root
+        if current_depth < depth:
+            children = generate_children(
+                path=path,
+                branching_factor=branching_factor if not is_root else 1,
+                target_number=target_number
             )
-            children.append(child)
-    
+
+        # Create and return the current node
         return MenuNode(
-            id=node_id_counter,
-            text=node_text,
-            children=children,
-            is_target=is_target
+            number=1 if is_root else path[-1].split()[-1],
+            text="Root" if is_root else path[-1],
+            is_target=False,
+            children=[build_tree(path + [child.text], current_depth + 1) for child in children]
         )
 
-    def print_tree(self):
-        def print_menu_tree(node, indent=0):
-            target_marker = " [TARGET]" if node.is_target else ""
-            print('    ' * indent + f"Node ID {node.id}: {node.text}{target_marker}")
-            for child in node.children:
-                print_menu_tree(child, indent + 1)
+    # Build the tree starting from the root
+    return build_tree(path=[], current_depth=0)
 
-        print_menu_tree(self.root)
 
-    def export_to_json(self, filename):
-        with open(filename, "w") as file:
-            json.dump(self.root.to_dict(), file, indent=4)
-        print(f"Menu tree exported to {filename}")
+def export_menu_tree_to_json(tree: MenuNode, filename: str):
+    """
+    Exports the menu tree to a JSON file.
+    """
+    with open(filename, "w") as file:
+        json.dump(tree.dict(), file, indent=4)
+    print(f"Menu tree exported to {filename}")
 
 
 if __name__ == "__main__":
-    menu_tree = MenuTree(depth=5, branching_factor=3)
-    menu_tree.print_tree()
-    menu_tree.export_to_json("menu_tree.json")
+    # Define tree parameters
+    tree_depth = 3
+    branching_factor = 3
+    # Number of targets at each level (how many targets are in a node's children)
+    target_number = 1
+
+    # Generate the menu tree
+    menu_tree = generate_menu_tree(
+        depth=tree_depth,
+        branching_factor=branching_factor,
+        target_number=target_number
+    )
+
+    # Export to JSON
+    export_menu_tree_to_json(menu_tree, "menu_tree.json")
