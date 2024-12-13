@@ -34,6 +34,7 @@ class CallMenuEnv(gym.Env):
         
         # Action space is discrete with max_children possible actions (will be masked later if needed)
         self.action_space = spaces.Discrete(self.max_children)
+        self.action_space.n = self.max_children
         
         self.reset()
 
@@ -107,7 +108,7 @@ class CallMenuEnv(gym.Env):
         if len(self._get_children(self.current_node)) == 0 or self._find_target_node(self.current_node):
             done = True
 
-        reward = 1.0 if self._find_target_node(self.current_node) else 0.0 # TODO: Maybe try different reward function?
+        reward = 100.0 if self._find_target_node(self.current_node) else -0.1 # TODO: Maybe try different reward function?
         observation = self._get_observation()
         info = self._get_info()
         return observation, reward, done, truncated, info

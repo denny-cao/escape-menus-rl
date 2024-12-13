@@ -1,7 +1,7 @@
 import numpy as np
 import utils
 import matplotlib.pyplot as plt
-
+from menu_tree import MenuTreeEnv
 
 def sample(theta, env, N):
     """ samples N trajectories using the current policy
@@ -65,7 +65,7 @@ def train(N, T, delta, lamb=1e-3):
         avg_episodes_rewards: list of average rewards for each time step
     """
     theta = np.random.rand(100,1)
-    env = gym.make('CartPole-v0')
+    env = gym.make('MenuTreeEnv')
     env.seed(12345)
 
     avg_episode_rewards = []

@@ -2,54 +2,177 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from transformers import BertTokenizer, BertModel
+from torch.distributions import Categorical
+from call_menu_env import CallMenuEnv
 
-LEVELS = 10
+class PolicyNetwork(nn.Module):
+    def __init__(self, input_dim, action_dim):
+        super(PolicyNetwork, self).__init__()
+        self.fc1 = nn.Linear(input_dim, 128)
+        self.fc2 = nn.Linear(128, action_dim)
 
-class NPG:
-    def __init__(self, state_dim, action_dim, lr=1e-3):
-        self.state_dim = state_dim
-        self.action_dim = action_dim
-        self.policy_net = nn.Sequential(
-                nn.Linear(state_dim, 64),
-                nn.ReLU(),
-                nn.Linear(64, action_dim),
-                nn.Softmax(dim=-1)
-        )
-        self.optimizer = optim.Adam(self.policy_net.parameters(), lr=lr)
-        self.bert_tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-        self.bert_model = BertModel.from_pretrained('bert-base-uncased')
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        logits = self.fc2(x)
+        return logits
 
-    def encode_state(self, text, level, max_len=256):
-        """
-        Encode text into a fixed size state vector w/ BERT
-        """
-        inputs = self.bert_tokenizer(text, return_tensors='pt', max_length=max_len, truncation=True, padding='max_length')
-        with torch.no_grad():
-            embedding = self.bert_model(**inputs).pooler_output.squeeze(0).numpy()
+class NPGAgent:
+    def __init__(self, observation_space, action_space, lr=1e-3, gamma=0.99, device="cpu"):
+        self.gamma = gamma
+        self.device = device
 
-        # One-hot encoding of level
-        level_one_hot = np.zeros(LEVELS) 
-        level_one_hot[level] = 1
+        input_dim = observation_space["text_embedding"].shape[0]
+        action_dim = action_space.n
 
-        return np.concatenate([embedding, level_one_hot])
+        self.policy_network = PolicyNetwork(input_dim, action_dim).to(device)
+        self.optimizer = optim.Adam(self.policy_network.parameters(), lr=lr)
 
-    def select_action(self, state):
-        """
-        Select action based on policy network
-        """
-        state = torch.FloatTensor(state, dtype=torch.float32)
-        action_probs = self.policy_net(state)
-        action = torch.multinomial(action_probs, 1).item()
+    def select_action(self, observation, action_mask):
+        text_embedding = torch.tensor(observation["text_embedding"], dtype=torch.float32).to(self.device)
 
-        return action
+        logits = self.policy_network(text_embedding)
+        masked_logits = logits + (1 - torch.tensor(action_mask, dtype=torch.float32).to(self.device)) * -1e9 # Mask logits of invalid actions
 
-    def update(self, trajectories, rewards, gamma=0.99):
-        """
-        Update policy network with trajectories and rewards
-        """
+        probs = torch.softmax(masked_logits, dim=-1)
+        probs_categorical = Categorical(probs)
+        action = probs_categorical.sample()
+        log_prob = probs_categorical.log_prob(action)
+
+        return action.item(), log_prob
+
+    def update_policy(self, rewards, log_probs):
         discounted_rewards = []
-        for r in rewards:
-            discounted_rewards.append(
+        R = 0
+        for reward in reversed(rewards):
+            R = reward + self.gamma * R
+            discounted_rewards.insert(0, R)
 
+        discounted_rewards = torch.tensor(discounted_rewards, dtype=torch.float32).to(self.device)
+        discounted_rewards = (discounted_rewards - discounted_rewards.mean()) / (discounted_rewards.std() + 1e-8)
+
+        policy_loss = torch.stack([-log_prob * reward for log_prob, reward in zip(log_probs, discounted_rewards)]).sum()
+
+        self.optimizer.zero_grad()
+        policy_loss.backward()
+        self.optimizer.step()
+
+if __name__ == "__main__":
+    menu = {
+        "number": 1,
+        "text": "Welcome to our service.",
+        "is_target": False,
+        "children": [
+            {
+                "number": 1,
+                "text": "For customer service representative, press 1.",
+                "is_target": False,
+                "children": [
+                    {
+                        "number": 1,
+                        "text": "For technical support, press 1.",
+                        "is_target": False,
+                        "children": [
+                            {
+                                "number": 1,
+                                "text": "For software related issues, press 1.",
+                                "is_target": False,
+                                "children": []
+                            },
+                            {
+                                "number": 2,
+                                "text": "For hardware related issues, press 2.",
+                                "is_target": False,
+                                "children": []
+                            },
+                            {
+                                "number": 3,
+                                "text": "To speak directly with a technical support representative, press 3.",
+                                "is_target": True,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "number": 2,
+                        "text": "For billing inquiries, press 2.",
+                        "is_target": False,
+                        "children": [
+                            {
+                                "number": 1,
+                                "text": "For general billing questions, press 1.",
+                                "is_target": False,
+                                "children": []
+                            },
+                            {
+                                "number": 2,
+                                "text": "For specific invoice queries, press 2.",
+                                "is_target": False,
+                                "children": []
+                            },
+                            {
+                                "number": 3,
+                                "text": "For payment methods, press 3.",
+                                "is_target": False,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "number": 3,
+                        "text": "For questions about our products, press 3.",
+                        "is_target": False,
+                        "children": [
+                            {
+                                "number": 1,
+                                "text": "For information about product warranties, press 1.",
+                                "is_target": False,
+                                "children": []
+                            },
+                            {
+                                "number": 2,
+                                "text": "To speak with a product specialist, press 2.",
+                                "is_target": False,
+                                "children": []
+                            },
+                            {
+                                "number": 3,
+                                "text": "For information about product returns, press 3.",
+                                "is_target": False,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    env = CallMenuEnv(menu, max_children=10)
+    obs, info = env.reset()
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    agent = NPGAgent(env.observation_space, env.action_space, device=device)
+
+    num_episodes = 1000
+    for episode in range(num_episodes):
+        obs, info = env.reset()
+        done = False
+
+        rewards = []
+        log_probs = []
+
+        while not done:
+            action_mask = info["action_mask"]
+            action, log_prob = agent.select_action(obs, action_mask)
+
+            print(f"Action: {action}")
+
+            obs, reward, done, truncated, info = env.step(action)
+
+            rewards.append(reward)
+            log_probs.append(log_prob)
+
+        agent.update_policy(rewards, log_probs)
+
+        if episode % 100 == 0:
+            print(f"Episode {episode}: Total Reward: {sum(rewards)}")
 
