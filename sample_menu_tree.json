@@ -1,0 +1,52 @@
+{
+    "number": "1",
+    "text": "Welcome to GreenValley Grocers Customer Support.",
+    "is_target": false,
+    "children": [
+        {
+            "number": "1",
+            "text": "Press 1 for store information.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": "2",
+                    "text": "Press 2 for store location.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": "3",
+                            "text": "Press 3 for store's contact details.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": "0",
+                            "text": "Press 0 to speak with a customer service representative.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": "3",
+                    "text": "Press 3 to speak with a customer service representative.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": "2",
+                            "text": "Press 2 for store location.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": "4",
+                            "text": "Press 4 to speak with a customer service representative.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

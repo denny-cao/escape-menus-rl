@@ -1,3 +1,4 @@
+
 from sklearn.kernel_approximation import RBFSampler
 import numpy as np
 
@@ -128,3 +129,4 @@ def compute_eta(delta, fisher, v_grad):
     """
 
     return np.sqrt(delta/(v_grad.T @ np.linalg.inv(fisher) @ v_grad + delta))
+
