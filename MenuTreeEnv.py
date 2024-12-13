@@ -32,7 +32,7 @@ class CallMenuEnv(gym.Env):
             "text_embedding": spaces.Box(low=-np.inf, high=np.inf, shape=(embedding_dim,), dtype=np.float32)
         })
         
-        # Action space
+        # Action space is discrete with max_children possible actions (will be masked later if needed)
         self.action_space = spaces.Discrete(self.max_children)
         
         self.reset()
@@ -66,7 +66,7 @@ class CallMenuEnv(gym.Env):
         SOURCE: https://datascience.stackexchange.com/questions/61618/valid-actions-in-openai-gym
         Gym does not support dynamic action spaces, so we need to provide a mask of valid actions.
         """
-        # Create action mask
+
         children = self._get_children(self.current_node)
         action_mask = np.zeros(self.max_children, dtype=np.int32)
         action_mask[:len(children)] = 1
@@ -76,7 +76,6 @@ class CallMenuEnv(gym.Env):
         }
     
     def _compute_text_embedding(self, text):
-        # Tokenize text
         inputs = self.tokenizer(text, return_tensors='pt', truncation=True, max_length=128)
         inputs = {k: v.to(self.device) for k, v in inputs.items()}
         
@@ -91,9 +90,8 @@ class CallMenuEnv(gym.Env):
     def step(self, action):
         children = self._get_children(self.current_node)
 
-        # Check action validity
         if action < 0 or action >= len(children):
-            # Invalid action
+            # Invalid action so penalize and end episode
             reward = -1.0
             done = True
             truncated = False
@@ -109,7 +107,7 @@ class CallMenuEnv(gym.Env):
         if len(self._get_children(self.current_node)) == 0 or self._find_target_node(self.current_node):
             done = True
 
-        reward = 1.0 if self._find_target_node(self.current_node) else 0.0
+        reward = 1.0 if self._find_target_node(self.current_node) else 0.0 # TODO: Maybe try different reward function?
         observation = self._get_observation()
         info = self._get_info()
         return observation, reward, done, truncated, info
