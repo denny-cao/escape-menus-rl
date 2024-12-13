@@ -1,0 +1,158 @@
+{
+    "number": 1,
+    "text": "You've reached The Cozy Corner Caf\u00e9's customer service hotline.",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For order inquiries, press 1 to speak with a customer service agent.",
+            "is_target": true,
+            "children": []
+        },
+        {
+            "number": 2,
+            "text": "For menu information, press 2 to hear our automated menu options.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For general inquiries about menu items, press 1 to speak with a representative.",
+                    "is_target": true,
+                    "children": []
+                },
+                {
+                    "number": 2,
+                    "text": "For information about our specials and promotions, press 2 for recorded details.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For daily specials, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For upcoming events, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For loyalty program details, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "To provide feedback or suggestions, press 3 to fill out our automated survey.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service agent, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For menu details and descriptions, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To check our current promotions and offers, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For feedback or suggestions, press 3 to leave a message in our voicemail system.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For menu options, press 1 to hear about our daily specials.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For information about our menu, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To hear about our location and hours, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For catering options and inquiries, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For catering inquiries, press 2 to receive information about our catering services.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with your order, press 1 to speak with a live customer service agent.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information about our loyalty program, press 2 to hear details from our automated system.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For questions about our menu items, press 3 to access our FAQ section.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For location and hours, press 3 to get the details about our caf\u00e9's location and operating hours.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For menu options, press 1 to hear the available services we offer.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For catering inquiries, press 2 to receive information about our catering services.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For special events, press 3 to find out about hosting your event at our caf\u00e9.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

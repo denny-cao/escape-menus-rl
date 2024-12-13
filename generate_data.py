@@ -193,12 +193,14 @@ def get_next_filename(base_filename: str) -> str:
     # Construct the new filename
     return f"{base_name}_{next_number}{ext}"
 
-def export_menu_tree_to_json(tree: MenuNode, base_filename: str = "menu_tree.json"):
+def export_menu_tree_to_json(tree: MenuNode, base_filename: str = "menu_tree.json", folder_name: str = "default"):
     """
     Exports the menu tree to a JSON file.
     The filename will be created in the format: menu_tree_1.json, menu_tree_2.json, etc.
     """
-    filename = get_next_filename(base_filename)
+    os.makedirs(folder_name, exist_ok=True)
+
+    filename = get_next_filename(os.path.join(folder_name, base_filename))
     print(tree)
     json_data = tree.model_dump()
     with open(filename, "w") as file:
@@ -211,8 +213,9 @@ if __name__ == "__main__":
     tree_depth = 3
     branching_factor = 3
     # Number of targets at each level (how many targets are in a node's children)
-    target_chance = 0.5
-    num = 20
+    target_chance = 0.25
+    num = 200
+    folder_name = "25_p"
 
     # Generate the menu tree
     roots = generate_roots(num)
@@ -231,4 +234,4 @@ if __name__ == "__main__":
         )
 
         # Export to JSON
-        export_menu_tree_to_json(menu_tree, "menu_tree.json")
+        export_menu_tree_to_json(menu_tree, "menu_tree.json", folder_name)
