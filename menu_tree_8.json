@@ -1,0 +1,253 @@
+{
+    "number": 1,
+    "text": "Welcome to Culinary Delights Restaurant, where every meal is a masterpiece.",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For reservation information, press 1.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For table reservations, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with your reservation, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To modify an existing reservation, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To cancel your reservation, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To speak with a reservation specialist, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For reservation details and availability, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a reservation specialist, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For group booking inquiries, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For group bookings and events, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For new reservations, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For existing reservation changes, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For reservation cancellations, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "text": "To learn about our menu, press 2.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For today's specials, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For appetizers and starters, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For main courses and entrees, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For desserts and beverages, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For our drinks menu, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For information on our specialty cocktails, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak directly with a sommelier, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For details on non-alcoholic beverages, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For dessert options, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For a list of our popular dessert items, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For today's dessert specials, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on seasonal desserts, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For hours of operation, press 3.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For reservations, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To learn more about our menu options, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on our special events, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To inquire about our catering services, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To speak with our customer service agent, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For menu options and specials, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For reservation information, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For catering services, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For information about our catering services, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For catering menu details, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To inquire about catering packages, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For catering booking policies, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

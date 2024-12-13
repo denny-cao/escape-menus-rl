@@ -1,0 +1,253 @@
+{
+    "number": 1,
+    "text": "\"Thank you for calling Maple Grove Grocer's customer service, where fresh finds and friendly support are just a call away!\"",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For store hours and locations, press 1.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For delivery status and tracking, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For questions about your order, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a customer service agent, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on delivery services, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To speak with a customer service representative, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For information about our weekly specials, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For details on our return policy, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For assistance with online orders, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For product information and availability, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For information on organic produce, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For details about our bakery products, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For inquiries about our weekly specials, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "text": "For online order assistance, press 2.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For questions about your delivery, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For delivery status updates, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To report a missing item, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For rescheduling your delivery, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For issues with payment processing, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For payment method updates, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a payment specialist, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For payment receipt requests, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "To modify your online order, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For adding new items to your order, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For removing items from your order, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For changing the delivery address, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For loyalty program information, press 3.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For account balance and points, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For checking your current point balance, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For redeeming points for rewards, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To speak with a loyalty program specialist, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To redeem rewards, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For reward balance inquiries, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To redeem points for discounts, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For help with redeeming rewards online, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "To speak with a loyalty program specialist, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For account balance inquiries, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To update your loyalty program details, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To speak with a loyalty program specialist, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,253 @@
+{
+    "number": 1,
+    "text": "\"Thank you for calling FreshMart Grocery's customer support.\"",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For store hours and location information, press 1.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For our store's weekly promotions, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For details about our ongoing discounts, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on upcoming store events, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To learn about our loyalty program benefits, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To learn about our return policy, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For inquiries related to store hours, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For assistance with our return policy, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To hear about our latest promotions, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For information on FreshMart membership benefits, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For inquiries about our weekly offers, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a customer service representative, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For details on upcoming store events, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "text": "For product availability and pricing, press 2.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For store hours and location information, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For information on our weekly specials, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To learn about our return policy, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For assistance with online orders, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For online order assistance, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For issues with existing orders, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a customer service representative, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on delivery status, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For loyalty program details, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For information on earning points, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For redeeming your points, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To speak with a loyalty program specialist, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For information on our weekly specials, press 3.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For details on our organic produce, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For assistance with organic produce delivery, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak directly to an organic produce specialist, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on organic produce pricing, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For information on bulk purchase discounts, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To learn about current bulk purchase discount rates, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on how to qualify for bulk discounts, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To know more about exclusive bulk offers for members, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "To know more about our loyalty program, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For details on earning points with each purchase, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To learn about exclusive member discounts, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on redeeming loyalty points, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

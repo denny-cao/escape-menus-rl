@@ -1,0 +1,253 @@
+{
+    "number": 1,
+    "text": "Thank you for calling Bright Horizons Electronics, your source for the latest tech gadgets.",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For product information, press 1.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For product specifications and details, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For detailed product specifications, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a product specialist, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For warranty and return information, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To speak with a product specialist, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For product specifications, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For warranty and repair services, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For store locations and hours, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For upcoming product releases, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For details about the latest smartphones, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on the newest laptops, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To learn about the cutting-edge smart home devices, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "text": "For billing inquiries, press 2.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For account balance and payment history, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For recent transactions, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For payment methods, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For billing cycles, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To update your billing information, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To update your credit card details, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To review your recent transactions, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on billing cycles, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For billing disputes and correction requests, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For payment processing issues, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For invoice clarification, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For refund status, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "To speak with a customer service representative, press 3.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For product information, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For detailed product specifications, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To check product availability, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For warranty and return policy information, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For technical support, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For product information and availability, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To check your order status, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For warranty and returns information, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For order tracking, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For tracking your order status online, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on shipping and delivery times, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For assistance with modifying your order, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
