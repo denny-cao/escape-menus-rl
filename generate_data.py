@@ -1,150 +1,222 @@
+# generate_data.py
+
 import json
 import os
 import re
-from typing import List, Optional
-from typing import Dict, List, Optional
+from typing import Optional, List
 import openai
-import os
 from pydantic import BaseModel
+import logging
 
-client = openai.OpenAI()
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class MenuNode(BaseModel):
-    number: int
+    number: str
     text: Optional[str]
     is_target: bool
     children: List["MenuNode"] = []
 
-class GPTMenuNodeChildren(BaseModel):
-    children: List[MenuNode]
+MenuNode.update_forward_refs()
 
-def generate_children(path, branching_factor, target_number):
+def generate_children(path: List[str], branching_factor: int, target_number: int) -> List[MenuNode]:
     """
-    Calls OpenAI to generate structured child nodes for a given parent.
+    Generate children menu nodes using the OpenAI API with strict adherence to the rules.
     """
-    try:
-        system_prompt = (
-            f"""
-            You are generating a structured menu tree for a call center system.
 
-            ### Your Task:
-            Generate all child menu nodes for a given parent node in the tree. The information provided includes:
-            1. **Current Path**: The sequence of menu options leading to the current node, including the parent node.
+    is_root = (len(path) == 0)
+    desired_count = 1 if is_root else branching_factor
+    parent_context = "Root" if is_root else " > ".join(path)
 
-            ### Rules for Generation:
-            Structure of a node:
-            - `number`: The number corresponding to the number that the parent text says to click to get to the child.
-            - `text`: The text of the node, corresponding to what someone may hear at one level of a call center menu.
-            - `is_target`: A boolean indicating if this node is an agent. If so, the `text` field may be left empty.
-            - `children`: Empty list.
+    # Simplified, very explicit prompt:
+    # We define the structure, the rules, and provide a single example.
+    system_prompt = f"""
+You are creating a JSON array of menu options (child nodes) for an IVR system of "GreenValley Grocers".
 
-            1. If the current node is the **Root**:
-            - Generate exactly **one child node**.
-            - Assign the 'number' 1 to the child and provide meaningful text.
+### Rules:
+- Output: A JSON array of exactly {desired_count} objects.
+- Each object has:
+  - "number": a single character from [0-9,*,#]
+  - "text": a string starting with "Press <number> for..." or "Press <number> to speak with..."
+  - "is_target": boolean
+  - "children": an empty array []
+- No extra text or commentary outside the JSON array.
+- Unique "number" for each child.
 
-            2. For all other nodes:
-            - Generate exactly **{branching_factor} child nodes**.
-            - Each child must:
-                - Have a unique number corresponding to the action required to reach it from the parent.
-                - Include `text` corresponding to what someone may hear at that level of the menu.
-                    Each child's implicit grandchildren in the `text` field should include **{branching_factor} grandchild nodes** 
-                    and **{target_number}** of them should lead to speaking to an agent. This can be subtly implied.
-                - Specify whether it leads to an agent (`is_target: true`). If so, the `text` field may be left empty.
+### Conditions:
+- If at the root (no parent selections):
+  - Exactly 1 child.
+  - is_target=false
+  - Provide a top-level option like: "Press 1 for store information."
+- If not root:
+  - Exactly {branching_factor} children.
+  - Exactly {target_number} of them must have is_target=true.
+    - A target node must say: "Press X to speak with a customer service representative."
+    - Non-target nodes must not mention "representative."
+    - Non-target nodes: "Press X for <relevant info>."
+- The "relevant info" should be consistent with the parent context.
+- The target node (if any) must say "Press X to speak with a customer service representative."
+- Non-target nodes must NOT mention "representative."
 
-            EXAMPLE TEXT FOR A NODE:
+### Example (if branching_factor=2, target_number=1):
+[
+  {{
+    "number": "1",
+    "text": "Press 1 for today's store hours.",
+    "is_target": false,
+    "children": []
+  }},
+  {{
+    "number": "9",
+    "text": "Press 9 to speak with a customer service representative.",
+    "is_target": true,
+    "children": []
+  }}
+]
 
-            [START EXAMPLE TEXT]
+Current context: {parent_context}
+Follow these rules exactly.
+"""
 
-            Welcome to [Company Name]'s support center. Please listen carefully to the following options:
+    user_prompt = ""
 
-            For billing inquiries, press 1. This includes questions about invoices, payment methods, or refund requests.
-            For technical support, press 2. Our agents can help you troubleshoot any issues with our products or services.
-            To track an order, press 3. You will need your order number or account information handy.
-            To speak with a representative, press 4. Please note that hold times may vary.
+    MAX_RETRIES = 3
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0.0,
+                timeout=30
+            )
+            raw = response.choices[0].message.content.strip()
+            logger.info(f"Attempt {attempt}: Raw API Response: {raw}")
 
-            [END EXAMPLE TEXT]
-            """
-        )
-        user_prompt = (
-            f"""
-            Current path: {' > '.join(path) if path else 'Root'}.
-            """
-        )
-        completion = client.beta.chat.completions.parse(
-            model="gpt-4o",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            response_format=GPTMenuNodeChildren,
-            temperature=0.7,
-        )
+            if not raw:
+                raise ValueError("Empty response from OpenAI API.")
 
-        children_data = completion.choices[0].message.parsed
-        print(children_data)
+            parsed = json.loads(raw)
 
-        return [MenuNode(**child) for child in children_data]
-        
-    except Exception as e:
-        print(f"Error using ChatGPT for menu text generation: {e}")
-        return [
-            MenuNode(number=i + 1, text=f"Press 1 to continue", is_target=False)
-            for i in range(branching_factor)
-        ]
+            # Validate number of children
+            if len(parsed) != desired_count:
+                raise ValueError(f"Expected {desired_count} children, got {len(parsed)}")
+
+            # Validate structure
+            numbers_seen = set()
+            target_count = 0
+            for child in parsed:
+                # Check required fields
+                if not all(k in child for k in ["number", "text", "is_target", "children"]):
+                    raise ValueError("Child node missing required fields.")
+                if not isinstance(child["is_target"], bool):
+                    raise ValueError("is_target must be boolean.")
+                if not isinstance(child["children"], list):
+                    raise ValueError("children must be a list.")
+                if not child["number"]:
+                    raise ValueError("number must not be empty.")
+                if child["number"] in numbers_seen:
+                    raise ValueError(f"Duplicate number: {child['number']}")
+                numbers_seen.add(child["number"])
+
+                text_lower = child["text"].lower()
+                # Check formatting of text
+                if not child["text"].startswith("Press "):
+                    raise ValueError("Text must start with 'Press '")
+                if "representative" in text_lower:
+                    # must be target = true
+                    if not child["is_target"]:
+                        raise ValueError("Mentioned 'representative' but is_target=false.")
+                    target_count += 1
+                else:
+                    # No representative mention -> must be non-target
+                    if child["is_target"]:
+                        raise ValueError("is_target=true without mentioning representative.")
+                
+            # Check target_count matches target_number for non-root
+            if not is_root and target_count != target_number:
+                raise ValueError(f"Expected {target_number} target nodes, got {target_count}")
+
+            return [MenuNode(**c) for c in parsed]
+
+        except (json.JSONDecodeError, ValueError) as e:
+            logger.error(f"Attempt {attempt}: {e}")
+            if attempt < MAX_RETRIES:
+                logger.info("Retrying...")
+                continue
+            else:
+                logger.error("Max retries reached. Using fallback.")
+                break
+        except openai.error.OpenAIError as e:
+            logger.error(f"OpenAI API error: {e}")
+            if attempt < MAX_RETRIES:
+                logger.info("Retrying...")
+                continue
+            else:
+                logger.error("Max retries reached. Using fallback.")
+                break
+        except Exception as e:
+            logger.error(f"Unexpected error: {e}")
+            if attempt < MAX_RETRIES:
+                logger.info("Retrying...")
+                continue
+            else:
+                logger.error("Max retries reached. Using fallback.")
+                break
+
+    # Fallback: produce a minimal correct structure
+    logger.info("Using fallback placeholder nodes.")
+    count = desired_count
+    possible_keys = [str(i) for i in range(10)] + ["*", "#"]
+    children = []
+    for i in range(count):
+        num = possible_keys[i % len(possible_keys)]
+        if is_root:
+            # one child, non-target
+            txt = f"Press {num} for store hours."
+            is_t = False
+        else:
+            # If we need target_number > 0, put one target node
+            # e.g. the last child is target if target_number=1
+            if i == count - 1 and target_number == 1:
+                txt = f"Press {num} to speak with a customer service representative."
+                is_t = True
+            else:
+                txt = f"Press {num} for more information."
+                is_t = False
+        children.append(MenuNode(number=num, text=txt, is_target=is_t, children=[]))
+    return children
+
 
 def generate_menu_tree(depth: int, branching_factor: int, target_number: int) -> MenuNode:
-    """
-    Recursively generates a menu tree structure.
-    """
     def build_tree(path: List[str], current_depth: int) -> MenuNode:
-        # Determine if the current node is the root
-        is_root = current_depth == 0
+        is_root = (current_depth == 0)
+        if is_root:
+            current_number = "1"
+            current_text = "Welcome to GreenValley Grocers Customer Support."
+            children_nodes = generate_children(path, branching_factor=1, target_number=0)
+        else:
+            last_text = path[-1]
+            match = re.search(r"Press (\d+|\*|#)", last_text)
+            current_number = match.group(1) if match else "1"
+            current_text = last_text
+            children_nodes = []
+            if current_depth < depth:
+                children_nodes = generate_children(path, branching_factor=branching_factor, target_number=target_number)
 
-        # Generate children if within depth
-        children = []
-        if current_depth < depth:
-            children = generate_children(
-                path=path,
-                branching_factor=branching_factor if not is_root else 1,
-                target_number=target_number
-            )
-
-        # Create and return the current node
         return MenuNode(
-            number=1 if is_root else path[-1].split()[-1],
-            text="Root" if is_root else path[-1],
+            number=current_number,
+            text=current_text,
             is_target=False,
-            children=[build_tree(path + [child.text], current_depth + 1) for child in children]
+            children=[build_tree(path + [child.text], current_depth + 1) for child in children_nodes]
         )
-
-    # Build the tree starting from the root
-    return build_tree(path=[], current_depth=0)
-
+    return build_tree([], 0)
 
 def export_menu_tree_to_json(tree: MenuNode, filename: str):
-    """
-    Exports the menu tree to a JSON file.
-    """
     with open(filename, "w") as file:
         json.dump(tree.dict(), file, indent=4)
-    print(f"Menu tree exported to {filename}")
-
-# Main script
-if __name__ == "__main__":
-    # Define tree parameters
-    tree_depth = 3
-    branching_factor = 3
-    # Number of targets at each level (how many targets are in a node's children)
-    target_number = 1
-
-    # Generate the menu tree
-    menu_tree = generate_menu_tree(
-        depth=tree_depth,
-        branching_factor=branching_factor,
-        target_number=target_number
-    )
-
-    # Export to JSON
-    export_menu_tree_to_json(menu_tree, "menu_tree.json")
+    logger.info(f"Menu tree exported to {filename}")
