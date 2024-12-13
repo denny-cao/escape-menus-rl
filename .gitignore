@@ -1,6 +1,5 @@
 .env
 .venv/
-.env.example/
 
 *.xlsx
 *.docx
