@@ -39,9 +39,14 @@ def generate_children(path: List[str], branching_factor: int, target_chance: int
     """
     target_in_children = random.random() <= target_chance
     if target_in_children:
-        target_prompt = f"Exactly 1 of the {branching_factor} child nodes must have `is_target` set to `true`."
+        target_prompt = f"""
+        - You must set 'is_target' to true for exactly 1 of the {branching_factor} child nodes. You must set 'is_target' to false for all other child nodes.
+        This means that selecting this option will lead to a **live customer service agent**.  
+        - All other child nodes must have `is_target` set to `false`, meaning selecting 
+        those options will not connect to a live agent but instead to a submenu or automated response.  
+        """
     else:
-        target_prompt = "All of child nodes should have is_target set to False, meaning none of them should lead to a real customer service agent."
+        target_prompt = "All of child nodes should have `is_target` set to `false`, meaning selecting those options will not connect to a live agent but instead to a submenu or automated response."
     
     try:
         
@@ -58,7 +63,9 @@ def generate_children(path: List[str], branching_factor: int, target_chance: int
             ### Requirements for Each Child Node:
             - `number`: An integer corresponding to the option number (e.g., 1, 2, 3).
             - `text`: A string describing the menu option (e.g., "For billing inquiries, press 1.").
-            - `is_target`: A boolean indicating if this option leads directly to an agent (`true`) or not (`false`).
+            - `is_target`: 
+                - **true**: This means that selecting this option leads directly to a **live customer service agent**.  
+                - **false**: This means that selecting this option does **not lead to a live agent** but instead leads to a submenu or automated response.
             - `children`: An empty list (children will be generated recursively).
 
             ### Constraints:
@@ -84,7 +91,7 @@ def generate_children(path: List[str], branching_factor: int, target_chance: int
         )
 
         children_data = completion.choices[0].message.parsed
-        print(children_data)
+        # print(children_data)
 
         return children_data.children
         
@@ -128,7 +135,7 @@ def generate_roots(num: int) -> str:
         )
 
         data = completion.choices[0].message.parsed.sentences
-        print(data)
+        # print(data)
         return data
         
     except Exception as e:
@@ -139,17 +146,14 @@ def generate_roots(num: int) -> str:
         ]
     
 
-def generate_menu_tree(depth: int, branching_factor: int, target_chance: bool, root: str) -> MenuNode:
+def generate_menu_tree(depth: int, branching_factor: int, target_chance: bool, parent: MenuNode) -> MenuNode:
     """
     Recursively generates a menu tree structure.
     """
-    def build_tree(path: List[str], current_depth: int) -> MenuNode:
-        # Determine if the current node is the root
-        is_root = current_depth == 0
-
+    def build_tree(path: List[str], current_depth: int, current: MenuNode) -> MenuNode:
         # Generate children if within depth
         children = []
-        if current_depth < depth:
+        if current_depth < depth and not current.is_target:
             children = generate_children(
                 path=path,
                 branching_factor=branching_factor,
@@ -158,14 +162,14 @@ def generate_menu_tree(depth: int, branching_factor: int, target_chance: bool, r
 
         # Create and return the current node
         return MenuNode(
-            number=1 if is_root else int(re.search(r'\d+', path[-1]).group()) if path else 1,
-            text=f"{path[-1]}",
-            is_target=False,
-            children=[build_tree(path + [child.text], current_depth + 1) for child in children]
+            number=current.number,
+            text=current.text,
+            is_target=current.is_target,
+            children=[build_tree(path + [child.text], current_depth + 1, child) for child in children]
         )
     
     # Build the tree starting from the root
-    return build_tree(path=[root], current_depth=0)
+    return build_tree(path=[parent.text], current_depth=0, current=parent)
 
 
 def get_next_filename(base_filename: str) -> str:
@@ -196,8 +200,10 @@ def export_menu_tree_to_json(tree: MenuNode, base_filename: str = "menu_tree.jso
     The filename will be created in the format: menu_tree_1.json, menu_tree_2.json, etc.
     """
     filename = get_next_filename(base_filename)
+    print(tree)
+    json_data = tree.model_dump()
     with open(filename, "w") as file:
-        json.dump(tree.dict(), file, indent=4)
+        json.dump(json_data, file, indent=4)
     print(f"Menu tree exported to {filename}")
 
 
@@ -212,11 +218,17 @@ if __name__ == "__main__":
     # Generate the menu tree
     roots = generate_roots(num)
     for root in roots:
+        parent = MenuNode(
+            number=1,
+            text=root,
+            is_target=False,
+            children=[]
+        )
         menu_tree = generate_menu_tree(
             depth=tree_depth,
             branching_factor=branching_factor,
             target_chance=target_chance,
-            root=root
+            parent=parent
         )
 
         # Export to JSON

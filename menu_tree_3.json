@@ -1,33 +1,33 @@
 {
     "number": 1,
-    "text": "\"Thank you for calling Cozy Corner Bookstore's customer support, where your next great read is just a conversation away!\"",
+    "text": "Thank you for calling Pet Paradise's assistance line.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For store hours and location, press 1.",
+            "text": "For appointment scheduling, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For information about our store hours, press 1.",
+                    "text": "For appointment confirmation, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For our physical store locations, press 1.",
+                            "text": "For rescheduling your appointment, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To hear about our online store and shipping options, press 2.",
-                            "is_target": false,
+                            "text": "To speak with a customer service agent, press 2.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To speak directly to a customer service agent, press 3.",
+                            "text": "For cancellation policies, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -35,24 +35,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "To learn about our store location, press 2.",
+                    "text": "For appointment rescheduling, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For information on parking and public transport, press 1.",
+                            "text": "For checking available appointments, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a customer service agent about directions, press 2.",
+                            "text": "For cancelling an appointment, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For details on nearby attractions, press 3.",
+                            "text": "For information on appointment procedures, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -60,24 +60,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For directions to the store, press 3.",
+                    "text": "For appointment cancellation, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For parking information, press 1.",
+                            "text": "For appointment scheduling options, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak directly with an agent, press 2.",
+                            "text": "To reschedule an appointment, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For nearby transportation options, press 3.",
+                            "text": "For appointment cancellation policies, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -87,111 +87,35 @@
         },
         {
             "number": 2,
-            "text": "For information about current promotions, press 2.",
-            "is_target": false,
-            "children": [
-                {
-                    "number": 1,
-                    "text": "For details on our latest book releases, press 1.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For book release dates and details, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To speak with a representative about book releases, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For information on upcoming book signings, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "text": "To learn about our membership benefits, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For details on current discounts and offers, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To find out about upcoming events and signings, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For information on our loyalty program perks, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 3,
-                    "text": "For information on upcoming author events, press 3.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For information about our return policy, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For details on our membership benefits, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For store hours and location details, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                }
-            ]
+            "text": "For billing inquiries, press 2.",
+            "is_target": true,
+            "children": []
         },
         {
             "number": 3,
-            "text": "To learn about our book club events, press 3.",
+            "text": "For information on our services, press 3.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For information on upcoming book club meetings, press 1.",
+                    "text": "For grooming services, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For book club meeting schedules, press 1.",
+                            "text": "For grooming appointment scheduling, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a book club coordinator, press 2.",
+                            "text": "For grooming service details, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For book club membership inquiries, press 3.",
+                            "text": "For grooming pricing inquiries, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -199,49 +123,30 @@
                 },
                 {
                     "number": 2,
-                    "text": "To know more about joining our book club, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For information on upcoming book club meetings, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To learn about the benefits of joining our book club, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For details on book club membership tiers, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
+                    "text": "To speak with a customer service agent, press 2.",
+                    "is_target": true,
+                    "children": []
                 },
                 {
                     "number": 3,
-                    "text": "For details on hosting your own book club at our store, press 3.",
+                    "text": "For pet boarding services, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For information on membership benefits, press 1.",
+                            "text": "For boarding availability and pricing, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a book club coordinator, press 2.",
-                            "is_target": false,
+                            "text": "To speak with a boarding specialist, press 2.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For a list of upcoming book club events, press 3.",
+                            "text": "For information on pet accommodations, press 3.",
                             "is_target": false,
                             "children": []
                         }
