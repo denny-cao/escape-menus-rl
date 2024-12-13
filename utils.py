@@ -3,6 +3,12 @@ import numpy as np
 
 rbf_feature = RBFSampler(gamma=1, random_state=12345)
 
+def flatten_observation(observation):
+    """ 
+    SOURCE: ChatGPT. Training code works for CartPole-v0 where state = env.reset()
+    returns vectorized observation values, but custom environment returns dictionary of values.
+    """
+    return np.concatenate([v.flatten() for v in observation.values()])
 
 def extract_features(state, num_actions):
     """ This function computes the RFF features for a state for all the discrete actions
