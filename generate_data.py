@@ -217,11 +217,17 @@ if __name__ == "__main__":
     branching_factor = 3
     # Number of targets at each level (how many targets are in a node's children)
     target_chance = 0.25
-    num = 200
-    folder_name = "25_p"
+    num = 269
+    folder_name = f"pr_{int(target_chance * 100)}_br_{branching_factor}_dp_{tree_depth}"
 
-    # Generate the menu tree
-    roots = generate_roots(num)
+    # Generate the menu roots
+    roots = []
+    for i in range(0, num, 25):
+        count = min(10, num - i)  # Ensure the last batch doesn't exceed num
+        batch_roots = generate_roots(count)
+        roots.extend(batch_roots)
+        
+    # Generate the trees
     for root in roots:
         parent = MenuNode(
             number=1,
