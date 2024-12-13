@@ -1,33 +1,33 @@
 {
     "number": 1,
-    "text": "Thank you for contacting Adventure Outdoors customer service.",
+    "text": "Welcome to Fashion Forward's support center.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For product information and availability, press 1.",
+            "text": "For order status inquiries, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For detailed product specifications, press 1.",
+                    "text": "For tracking your order, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For product dimensions, press 1.",
+                            "text": "For updates on delivery times, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For warranty information, press 2.",
+                            "text": "To change your shipping address, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For user reviews, press 3.",
+                            "text": "For issues with your order, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -35,24 +35,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For store locations and hours, press 2.",
+                    "text": "For issues with your order, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For product specifications and details, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To speak with a customer service agent, press 2.",
+                            "text": "To speak with a customer service representative, press 1.",
                             "is_target": true,
                             "children": []
                         },
                         {
+                            "number": 2,
+                            "text": "For automated order tracking, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
                             "number": 3,
-                            "text": "For warranty and return policies, press 3.",
+                            "text": "For return policy information, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -60,24 +60,49 @@
                 },
                 {
                     "number": 3,
-                    "text": "For current promotions and offers, press 3.",
+                    "text": "For changing your order details, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For hiking gear inquiries, press 1.",
+                            "text": "To speak with a customer service agent about your order status, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For automated order status updates, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To check FAQs regarding order status, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 4,
+                    "text": "For returning an item, press 4.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For tracking your order, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For speaking with a customer service agent, press 2.",
-                            "is_target": true,
+                            "text": "For information on return policies, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For details on upcoming outdoor events, press 3.",
+                            "text": "For assistance with exchanges, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -87,29 +112,29 @@
         },
         {
             "number": 2,
-            "text": "For order status and tracking, press 2.",
+            "text": "For return and exchange policies, press 2.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For order updates and delivery estimates, press 1.",
+                    "text": "For return policies, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For more information on your order status, press 1.",
+                            "text": "For information on our return process, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a live customer service agent about your order, press 2.",
-                            "is_target": true,
+                            "text": "To check the status of your return, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For automated updates on delivery estimates, press 3.",
+                            "text": "For questions about exchanges, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -117,24 +142,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For tracking number and shipment details, press 2.",
+                    "text": "For exchange policies, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For tracking your order via email, press 1.",
+                            "text": "For information on how to initiate an exchange, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For tracking your order via SMS, press 2.",
+                            "text": "To check the status of your exchange request, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For tracking your order via our website, press 3.",
+                            "text": "For additional questions about exchange policies, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -142,24 +167,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For modifying or canceling your order, press 3.",
+                    "text": "For additional information on returns and exchanges, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "To check your order status, press 1.",
-                            "is_target": false,
+                            "text": "For live assistance with your return or exchange, press 1.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To track your shipment, press 2.",
+                            "text": "For information on our return shipping process, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For estimated delivery times, press 3.",
+                            "text": "To check the status of your return, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -169,29 +194,29 @@
         },
         {
             "number": 3,
-            "text": "For returns and exchanges, press 3.",
+            "text": "For product information, press 3.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For return policy details, press 1.",
+                    "text": "For sizing and fit guidance, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For detailed return instructions, press 1.",
+                            "text": "For size charts, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For return status updates, press 2.",
+                            "text": "For fit recommendations, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For information on return shipping, press 3.",
+                            "text": "For exchange and return policies, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -199,24 +224,30 @@
                 },
                 {
                     "number": 2,
-                    "text": "For exchange procedures, press 2.",
+                    "text": "For care instructions and fabric information, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For information on exchange policies, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To speak with an exchange specialist, press 2.",
+                            "text": "For immediate assistance with your order, press 1 to speak with a customer service agent.",
                             "is_target": true,
                             "children": []
                         },
                         {
+                            "number": 2,
+                            "text": "For information on our return policy, press 2 to hear our automated response.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
                             "number": 3,
-                            "text": "For tracking your exchange status, press 3.",
+                            "text": "For frequently asked questions about care instructions, press 3 for more options.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 4,
+                            "text": "For product warranty details, press 4 to access our automated system.",
                             "is_target": false,
                             "children": []
                         }
@@ -224,24 +255,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For status of your return or exchange, press 3.",
+                    "text": "For availability of products, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For tracking your return or exchange status online, press 1.",
+                            "text": "For size and fit information, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For information on return and exchange policies, press 2.",
+                            "text": "To check stock availability in your area, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For assistance with return and exchange forms, press 3.",
+                            "text": "For product features and specifications, press 3.",
                             "is_target": false,
                             "children": []
                         }

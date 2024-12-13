@@ -1,96 +1,96 @@
 {
     "number": 1,
-    "text": "You\u2019ve reached Garden Bloom Florist's customer care.",
+    "text": "You\u2019ve reached Urban Style Boutique's customer service.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For store hours and location, press 1.",
+            "text": "For store locations and hours, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For inquiries about online orders, press 1.",
+                    "text": "For details on our store locations, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For order tracking and delivery status, press 1.",
+                            "text": "For store address, directions, and parking information, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For questions about our return policy, press 2.",
-                            "is_target": false,
+                            "text": "To speak with a customer service agent about store locations, press 2.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To speak with a customer service agent, press 3.",
-                            "is_target": true,
+                            "text": "For store contact information and social media links, press 3.",
+                            "is_target": false,
                             "children": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "text": "For speaking with a live customer service agent, press 2.",
-                    "is_target": true,
-                    "children": []
-                },
-                {
-                    "number": 3,
-                    "text": "For information on our floral arrangements, press 3.",
+                    "text": "To inquire about store hours, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For details on available floral arrangements, press 1.",
+                            "text": "For store hours on weekdays, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For custom floral arrangement options, press 2.",
+                            "text": "For store hours on weekends, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For information on floral arrangement delivery, press 3.",
+                            "text": "For holiday store hours, press 3.",
                             "is_target": false,
                             "children": []
                         }
                     ]
+                },
+                {
+                    "number": 3,
+                    "text": "To speak with a live agent, press 3.",
+                    "is_target": true,
+                    "children": []
                 }
             ]
         },
         {
             "number": 2,
-            "text": "For order tracking, press 2.",
+            "text": "For order status and tracking, press 2.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For delivery status updates, press 1.",
+                    "text": "For delivery status, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For estimated delivery time, press 1.",
+                            "text": "For estimated delivery times, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For delivery address changes, press 2.",
+                            "text": "For delivery delays and updates, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For delivery confirmation, press 3.",
+                            "text": "For changing the delivery address, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -98,49 +98,30 @@
                 },
                 {
                     "number": 2,
-                    "text": "For order modifications, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For immediate assistance with your order, press 1.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For information about our delivery times, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To change your delivery address, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
+                    "text": "To speak with an agent, press 2.",
+                    "is_target": true,
+                    "children": []
                 },
                 {
                     "number": 3,
-                    "text": "For refund and return policies, press 3.",
+                    "text": "For return and refund policy, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For refund policy inquiries, press 1.",
+                            "text": "For questions about our return policy, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To connect with a customer service agent for returns, press 2.",
+                            "text": "For assistance from a customer service agent, press 2.",
                             "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For return shipping instructions, press 3.",
+                            "text": "To hear our refund processing times, press 3.",
                             "is_target": false,
                             "children": []
                         }

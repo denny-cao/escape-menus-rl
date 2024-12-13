@@ -41,9 +41,8 @@ def generate_children(path: List[str], branching_factor: int, target_chance: int
     if target_in_children:
         target_prompt = f"""
         - You must set 'is_target' to true for exactly 1 of the {branching_factor} child nodes. You must set 'is_target' to false for all other child nodes.
-        This means that selecting this option will lead to a **live customer service agent**.  
-        - All other child nodes must have `is_target` set to `false`, meaning selecting 
-        those options will not connect to a live agent but instead to a submenu or automated response.  
+        This means that selecting this option will lead to a **live customer service agent**. You can be subtle or direct when implying this.
+        - All other child nodes must have `is_target` set to `false`, meaning selecting those options will not connect to a live agent. 
         """
     else:
         target_prompt = "All of child nodes should have `is_target` set to `false`, meaning selecting those options will not connect to a live agent but instead to a submenu or automated response."
@@ -81,7 +80,7 @@ def generate_children(path: List[str], branching_factor: int, target_chance: int
             """
         )
         completion = client.beta.chat.completions.parse(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
@@ -114,7 +113,7 @@ def generate_roots(num: int) -> str:
             f"""
             ### Task:
             Generate {num} introductory sentences to a call center tree. 
-            Choose a business name from an industry like bookstores, 
+            Choose business names from industries like bookstores, 
             clothing stores, electronics shops, auto dealerships, beauty salons, restaurants, 
             healthcare providers, grocery stores, or other common business types. Don't 
             always choose the first type from that list -- be creative.

@@ -1,96 +1,102 @@
 {
     "number": 1,
-    "text": "You\u2019ve reached Garden Bloom Florist's customer care.",
+    "text": "You have reached Artistry Salon's client support.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For store hours and location, press 1.",
+            "text": "For booking an appointment, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For inquiries about online orders, press 1.",
+                    "text": "For hair styling services, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For order tracking and delivery status, press 1.",
+                            "text": "For hair coloring services, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For questions about our return policy, press 2.",
+                            "text": "For hair cutting services, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To speak with a customer service agent, press 3.",
-                            "is_target": true,
+                            "text": "For hair treatment options, press 3.",
+                            "is_target": false,
                             "children": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "text": "For speaking with a live customer service agent, press 2.",
-                    "is_target": true,
-                    "children": []
-                },
-                {
-                    "number": 3,
-                    "text": "For information on our floral arrangements, press 3.",
+                    "text": "For hair coloring services, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For details on available floral arrangements, press 1.",
+                            "text": "For details about hair coloring packages, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For custom floral arrangement options, press 2.",
+                            "text": "For available stylists and schedules, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For information on floral arrangement delivery, press 3.",
+                            "text": "For pre-treatment guidelines, press 3.",
                             "is_target": false,
                             "children": []
                         }
                     ]
+                },
+                {
+                    "number": 3,
+                    "text": "To speak with a live customer service agent, press 3.",
+                    "is_target": true,
+                    "children": []
                 }
             ]
         },
         {
             "number": 2,
-            "text": "For order tracking, press 2.",
+            "text": "For speaking directly with a stylist, press 2.",
+            "is_target": true,
+            "children": []
+        },
+        {
+            "number": 3,
+            "text": "For checking our services and prices, press 3.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For delivery status updates, press 1.",
+                    "text": "To hear about our new hair styling services, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For estimated delivery time, press 1.",
+                            "text": "For detailed hair styling service descriptions, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For delivery address changes, press 2.",
+                            "text": "For hair styling service pricing information, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For delivery confirmation, press 3.",
+                            "text": "To hear about our stylists' profiles and expertise, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -98,24 +104,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For order modifications, press 2.",
+                    "text": "To inquire about our special promotions, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For immediate assistance with your order, press 1.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For information about our delivery times, press 2.",
+                            "text": "For information about our hair styling services, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
+                            "number": 2,
+                            "text": "To speak with a live customer service agent about promotions, press 2.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
                             "number": 3,
-                            "text": "To change your delivery address, press 3.",
+                            "text": "For details on our spa treatments, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -123,36 +129,11 @@
                 },
                 {
                     "number": 3,
-                    "text": "For refund and return policies, press 3.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For refund policy inquiries, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To connect with a customer service agent for returns, press 2.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For return shipping instructions, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
+                    "text": "To speak with a live customer service agent, press 3.",
+                    "is_target": true,
+                    "children": []
                 }
             ]
-        },
-        {
-            "number": 3,
-            "text": "To speak with a customer service agent, press 3.",
-            "is_target": true,
-            "children": []
         }
     ]
 }

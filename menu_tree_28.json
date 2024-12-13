@@ -1,58 +1,39 @@
 {
     "number": 1,
-    "text": "Thank you for contacting Adventure Outdoors customer service.",
+    "text": "Thank you for contacting Bella's Beauty Salon, where you shine the brightest.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For product information and availability, press 1.",
+            "text": "For appointment inquiries, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For detailed product specifications, press 1.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For product dimensions, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For warranty information, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For user reviews, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
+                    "text": "For immediate assistance with your appointment, press 1 to speak with a customer service agent.",
+                    "is_target": true,
+                    "children": []
                 },
                 {
                     "number": 2,
-                    "text": "For store locations and hours, press 2.",
+                    "text": "To check the status of your appointment, press 2 for our automated system.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For product specifications and details, press 1.",
+                            "text": "For rescheduling your appointment, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a customer service agent, press 2.",
-                            "is_target": true,
+                            "text": "For canceling your appointment, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For warranty and return policies, press 3.",
+                            "text": "For inquiries about services, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -60,24 +41,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For current promotions and offers, press 3.",
+                    "text": "For rescheduling or cancellations, press 3 to hear our options.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For hiking gear inquiries, press 1.",
+                            "text": "For appointment availability, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For speaking with a customer service agent, press 2.",
-                            "is_target": true,
+                            "text": "For pricing information, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For details on upcoming outdoor events, press 3.",
+                            "text": "For services offered, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -87,29 +68,29 @@
         },
         {
             "number": 2,
-            "text": "For order status and tracking, press 2.",
+            "text": "For service pricing information, press 2.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For order updates and delivery estimates, press 1.",
+                    "text": "For hair services pricing, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For more information on your order status, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To speak with a live customer service agent about your order, press 2.",
+                            "text": "For questions about hair service pricing, press 1 to speak with a customer service representative.",
                             "is_target": true,
                             "children": []
                         },
                         {
+                            "number": 2,
+                            "text": "For information on our special offers, press 2 to hear our current promotions.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
                             "number": 3,
-                            "text": "For automated updates on delivery estimates, press 3.",
+                            "text": "To get a detailed list of services and prices, press 3 for an automated response.",
                             "is_target": false,
                             "children": []
                         }
@@ -117,24 +98,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For tracking number and shipment details, press 2.",
+                    "text": "For skin treatments pricing, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For tracking your order via email, press 1.",
-                            "is_target": false,
+                            "text": "To speak directly with a customer service representative, press 1.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For tracking your order via SMS, press 2.",
+                            "text": "For details on skin treatment packages, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For tracking your order via our website, press 3.",
+                            "text": "To hear our frequently asked questions about skin treatments, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -142,24 +123,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For modifying or canceling your order, press 3.",
+                    "text": "For nail services pricing, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "To check your order status, press 1.",
-                            "is_target": false,
+                            "text": "For immediate assistance with nail services, press 1 to connect to a customer service agent.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To track your shipment, press 2.",
+                            "text": "For detailed pricing on manicure services, press 2 to listen to our automated guide.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For estimated delivery times, press 3.",
+                            "text": "To hear about our pedicure options, press 3 for a recorded message.",
                             "is_target": false,
                             "children": []
                         }
@@ -169,29 +150,29 @@
         },
         {
             "number": 3,
-            "text": "For returns and exchanges, press 3.",
+            "text": "For product recommendations, press 3.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For return policy details, press 1.",
+                    "text": "For skincare product recommendations, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For detailed return instructions, press 1.",
+                            "text": "For moisturizing products, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For return status updates, press 2.",
+                            "text": "For anti-aging products, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For information on return shipping, press 3.",
+                            "text": "For acne treatment products, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -199,24 +180,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For exchange procedures, press 2.",
+                    "text": "For haircare product recommendations, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For information on exchange policies, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To speak with an exchange specialist, press 2.",
+                            "text": "For personalized product advice, press 1 to speak with a beauty consultant.",
                             "is_target": true,
                             "children": []
                         },
                         {
+                            "number": 2,
+                            "text": "For a list of our top-selling haircare products, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
                             "number": 3,
-                            "text": "For tracking your exchange status, press 3.",
+                            "text": "To hear about our latest promotions on haircare products, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -224,24 +205,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For status of your return or exchange, press 3.",
+                    "text": "For makeup product recommendations, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For tracking your return or exchange status online, press 1.",
+                            "text": "For skincare product recommendations, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For information on return and exchange policies, press 2.",
+                            "text": "For haircare product recommendations, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For assistance with return and exchange forms, press 3.",
+                            "text": "For special promotions on products, press 3.",
                             "is_target": false,
                             "children": []
                         }

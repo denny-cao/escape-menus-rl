@@ -1,33 +1,33 @@
 {
     "number": 1,
-    "text": "You have reached Dream Home Furniture's support hotline.",
+    "text": "You have reached Fresh Market's customer assistance.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For product information, press 1.",
+            "text": "For store hours and locations, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For product availability and delivery details, press 1.",
+                    "text": "For detailed store hours, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For delivery scheduling, press 1.",
+                            "text": "For holiday hours, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For store pickup options, press 2.",
+                            "text": "For regular weekday hours, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For estimated delivery times, press 3.",
+                            "text": "For weekend hours, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -35,49 +35,93 @@
                 },
                 {
                     "number": 2,
-                    "text": "For product specifications and materials, press 2.",
+                    "text": "For store locations and directions, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For detailed specifications of sofas, press 1.",
+                            "text": "For the nearest store location, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For materials used in dining tables, press 2.",
+                            "text": "For directions to our stores, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For information on bedroom furniture materials, press 3.",
-                            "is_target": false,
+                            "text": "To speak with a customer service agent about store locations, press 3.",
+                            "is_target": true,
                             "children": []
                         }
                     ]
                 },
                 {
                     "number": 3,
-                    "text": "For product assembly instructions, press 3.",
+                    "text": "To speak with a live customer service agent, press 3.",
+                    "is_target": true,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "text": "For product availability and prices, press 2.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For store location and hours, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For assembling tables, press 1.",
+                            "text": "For store location details, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a live assembly expert, press 2.",
+                            "text": "To speak with a live agent about store hours, press 2.",
                             "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For assembling chairs, press 3.",
+                            "text": "For holiday hours and special events, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To speak with a live agent about product availability, press 2.",
+                    "is_target": true,
+                    "children": []
+                },
+                {
+                    "number": 3,
+                    "text": "For automated product availability check, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For automated pricing information, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a customer service agent, press 2.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For product availability by email, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -86,86 +130,61 @@
             ]
         },
         {
-            "number": 2,
-            "text": "To speak with a customer service agent, press 2.",
-            "is_target": true,
-            "children": []
-        },
-        {
             "number": 3,
-            "text": "For store locations and hours, press 3.",
+            "text": "For online order assistance, press 3.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For information on delivery services, press 1.",
+                    "text": "For questions about your delivery status, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For delivery status updates, press 1.",
-                            "is_target": false,
+                            "text": "For immediate assistance with your delivery, press 1.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To schedule a delivery, press 2.",
+                            "text": "For automated delivery status updates, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To speak with a delivery specialist, press 3.",
-                            "is_target": true,
+                            "text": "To return to the previous menu, press 3.",
+                            "is_target": false,
                             "children": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "text": "To inquire about return policies, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For return policy details, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To initiate a return with a live agent, press 2.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For return policy frequently asked questions, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
+                    "text": "To speak with a live customer service agent, press 2.",
+                    "is_target": true,
+                    "children": []
                 },
                 {
                     "number": 3,
-                    "text": "For details on product warranties, press 3.",
+                    "text": "For information about online order refunds, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For warranty registration, press 1.",
+                            "text": "For questions about refund status, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For warranty claims and assistance, press 2.",
+                            "text": "To speak with a refund specialist, press 2.",
                             "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For warranty terms and conditions, press 3.",
+                            "text": "For automated refund processing, press 3.",
                             "is_target": false,
                             "children": []
                         }

@@ -1,58 +1,58 @@
 {
     "number": 1,
-    "text": "\"Welcome to Bright Reads Bookstore's customer service.\"",
+    "text": "Welcome to Sunny Days Clothing's help desk.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For store hours and location, press 1.",
+            "text": "For order status and tracking, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For information on store hours, press 1.",
+                    "text": "For tracking your order, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "To hear our weekend hours, press 1.",
+                            "text": "For tracking updates via email, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To hear our holiday hours, press 2.",
+                            "text": "To track your order using your account, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To speak with a representative about store hours, press 3.",
-                            "is_target": false,
+                            "text": "To speak directly with a customer service agent, press 3.",
+                            "is_target": true,
                             "children": []
                         }
                     ]
                 },
                 {
                     "number": 2,
-                    "text": "To hear our location details, press 2.",
+                    "text": "For estimated delivery times, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For parking and accessibility information, press 1.",
+                            "text": "For tracking your shipment, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For nearby public transport options, press 2.",
+                            "text": "For estimated delivery dates, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For directions from major landmarks, press 3.",
+                            "text": "For modifying your delivery preferences, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -60,24 +60,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "To speak with a representative, press 3.",
+                    "text": "For order modification or cancellation, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For store hours, press 1.",
+                            "text": "For information on how to modify an order, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For location information, press 2.",
+                            "text": "For instructions to cancel an order, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To speak with a representative, press 3.",
+                            "text": "For our return and exchange policy details, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -87,89 +87,7 @@
         },
         {
             "number": 2,
-            "text": "For online order status, press 2.",
-            "is_target": false,
-            "children": [
-                {
-                    "number": 1,
-                    "text": "For information on shipping times, press 1.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For shipping within the continental U.S., press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For international shipping inquiries, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For expedited shipping options, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "text": "To modify an existing order, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To change the shipping address, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For order cancellation, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To add items to your order, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 3,
-                    "text": "For details on return policies, press 3.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For questions about your order, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To speak with a representative, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For information on shipping times, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "number": 3,
-            "text": "For return and exchange policy, press 3.",
+            "text": "For return and exchange policies, press 2.",
             "is_target": false,
             "children": [
                 {
@@ -179,19 +97,19 @@
                     "children": [
                         {
                             "number": 1,
-                            "text": "For immediate assistance from a customer service agent, press 1.",
+                            "text": "For information on how to start a return, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For a detailed explanation of our return policy, press 2.",
+                            "text": "For details on exchange procedures, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To learn about return policy exceptions, press 3.",
+                            "text": "For frequently asked questions about returns, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -199,32 +117,13 @@
                 },
                 {
                     "number": 2,
-                    "text": "For assistance with an exchange, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For information on return periods, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To speak with an exchange specialist, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To learn about exchange eligibility, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
+                    "text": "To speak with a customer service agent, press 2.",
+                    "is_target": true,
+                    "children": []
                 },
                 {
                     "number": 3,
-                    "text": "To speak with a customer service agent, press 3.",
+                    "text": "For automated tracking of a return, press 3.",
                     "is_target": false,
                     "children": [
                         {
@@ -235,14 +134,96 @@
                         },
                         {
                             "number": 2,
-                            "text": "For details on our exchange policy, press 2.",
+                            "text": "To inquire about the status of your return with a live agent, press 2.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For questions about return shipping fees, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For store locations and hours, press 3.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For a list of store locations, including addresses, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For a detailed map of our stores, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For store hours of operation, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To learn about the time frame for returns and exchanges, press 3.",
+                            "text": "For parking information at our locations, press 3.",
                             "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For store hours of operation, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For today's hours of operation, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a customer service agent about store hours, press 2.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For a list of upcoming holiday hours, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For directions to the nearest store, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For a list of all store locations, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For current store hours, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To speak with a live agent about finding a store, press 3.",
+                            "is_target": true,
                             "children": []
                         }
                     ]

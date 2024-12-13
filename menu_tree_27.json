@@ -1,58 +1,39 @@
 {
     "number": 1,
-    "text": "Thank you for contacting Adventure Outdoors customer service.",
+    "text": "You've reached the customer support of Green Valley Auto Dealership.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For product information and availability, press 1.",
+            "text": "For vehicle financing questions, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For detailed product specifications, press 1.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For product dimensions, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For warranty information, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For user reviews, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
+                    "text": "For immediate assistance with your financing questions, press 1 to speak with a live customer service agent.",
+                    "is_target": true,
+                    "children": []
                 },
                 {
                     "number": 2,
-                    "text": "For store locations and hours, press 2.",
+                    "text": "For information about financing options, press 2 to hear our automated response.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For product specifications and details, press 1.",
+                            "text": "For information about loan applications, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a customer service agent, press 2.",
-                            "is_target": true,
+                            "text": "To check your financing status, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For warranty and return policies, press 3.",
+                            "text": "For details on payment plans, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -60,24 +41,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For current promotions and offers, press 3.",
+                    "text": "To check the status of your financing application, press 3 for a recorded update.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For hiking gear inquiries, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For speaking with a customer service agent, press 2.",
+                            "text": "To speak directly with a financing specialist, press 1.",
                             "is_target": true,
                             "children": []
                         },
                         {
+                            "number": 2,
+                            "text": "For information on financing options, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
                             "number": 3,
-                            "text": "For details on upcoming outdoor events, press 3.",
+                            "text": "To hear our FAQs about financing, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -87,29 +68,29 @@
         },
         {
             "number": 2,
-            "text": "For order status and tracking, press 2.",
+            "text": "For service and maintenance inquiries, press 2.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For order updates and delivery estimates, press 1.",
+                    "text": "For service appointment scheduling, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For more information on your order status, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To speak with a live customer service agent about your order, press 2.",
+                            "text": "For immediate assistance with your service appointment, press 1 to speak with a representative.",
                             "is_target": true,
                             "children": []
                         },
                         {
+                            "number": 2,
+                            "text": "To hear our automated service appointment instructions, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
                             "number": 3,
-                            "text": "For automated updates on delivery estimates, press 3.",
+                            "text": "For frequently asked questions about service appointments, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -117,24 +98,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For tracking number and shipment details, press 2.",
+                    "text": "For service status updates, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For tracking your order via email, press 1.",
+                            "text": "For scheduled maintenance inquiries, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For tracking your order via SMS, press 2.",
+                            "text": "For parts availability inquiries, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For tracking your order via our website, press 3.",
+                            "text": "For service hours and location, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -142,24 +123,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For modifying or canceling your order, press 3.",
+                    "text": "For maintenance tips and FAQs, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "To check your order status, press 1.",
-                            "is_target": false,
+                            "text": "For immediate assistance with your service needs, press 1 to speak with a customer service agent.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To track your shipment, press 2.",
+                            "text": "For a list of maintenance tips, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For estimated delivery times, press 3.",
+                            "text": "For frequently asked questions about service, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -169,29 +150,29 @@
         },
         {
             "number": 3,
-            "text": "For returns and exchanges, press 3.",
+            "text": "For general dealership information, press 3.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For return policy details, press 1.",
+                    "text": "For vehicle purchase inquiries, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For detailed return instructions, press 1.",
+                            "text": "For financing options, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For return status updates, press 2.",
+                            "text": "For trade-in evaluations, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For information on return shipping, press 3.",
+                            "text": "For vehicle service questions, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -199,24 +180,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For exchange procedures, press 2.",
+                    "text": "For service and maintenance questions, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For information on exchange policies, press 1.",
+                            "text": "For information about service packages, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with an exchange specialist, press 2.",
-                            "is_target": true,
+                            "text": "To check the status of your vehicle service, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For tracking your exchange status, press 3.",
+                            "text": "For scheduling a service appointment, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -224,28 +205,9 @@
                 },
                 {
                     "number": 3,
-                    "text": "For status of your return or exchange, press 3.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For tracking your return or exchange status online, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For information on return and exchange policies, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For assistance with return and exchange forms, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
+                    "text": "To speak with a customer service agent, press 3.",
+                    "is_target": true,
+                    "children": []
                 }
             ]
         }

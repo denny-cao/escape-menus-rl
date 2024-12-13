@@ -1,33 +1,33 @@
 {
     "number": 1,
-    "text": "Thank you for contacting Adventure Outdoors customer service.",
+    "text": "Thank you for contacting All Pets Veterinary Clinic.",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For product information and availability, press 1.",
+            "text": "For appointment scheduling, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For detailed product specifications, press 1.",
+                    "text": "For new appointment bookings, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For product dimensions, press 1.",
+                            "text": "For appointment confirmations, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For warranty information, press 2.",
-                            "is_target": false,
+                            "text": "To speak with a live agent, press 2.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For user reviews, press 3.",
+                            "text": "For appointment cancellations, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -35,24 +35,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For store locations and hours, press 2.",
+                    "text": "To reschedule or cancel an existing appointment, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For product specifications and details, press 1.",
+                            "text": "To check the availability of appointments, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a customer service agent, press 2.",
-                            "is_target": true,
+                            "text": "For information on our veterinarians, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For warranty and return policies, press 3.",
+                            "text": "To learn about our pet care services, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -60,24 +60,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For current promotions and offers, press 3.",
+                    "text": "For appointment reminders and confirmations, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For hiking gear inquiries, press 1.",
+                            "text": "For general appointment information, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For speaking with a customer service agent, press 2.",
-                            "is_target": true,
+                            "text": "For rescheduling an appointment, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For details on upcoming outdoor events, press 3.",
+                            "text": "To cancel an appointment, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -87,29 +87,29 @@
         },
         {
             "number": 2,
-            "text": "For order status and tracking, press 2.",
+            "text": "For prescription refills, press 2.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For order updates and delivery estimates, press 1.",
+                    "text": "For information on prescription status, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For more information on your order status, press 1.",
+                            "text": "For estimated delivery times, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with a live customer service agent about your order, press 2.",
-                            "is_target": true,
+                            "text": "For prescription pickup options, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For automated updates on delivery estimates, press 3.",
+                            "text": "For order modification, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -117,24 +117,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For tracking number and shipment details, press 2.",
+                    "text": "To request a prescription refill, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For tracking your order via email, press 1.",
+                            "text": "For prescription refill status updates, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For tracking your order via SMS, press 2.",
+                            "text": "To change pickup location for your prescription, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For tracking your order via our website, press 3.",
+                            "text": "For prescription refill policies, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -142,24 +142,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For modifying or canceling your order, press 3.",
+                    "text": "For prescription pricing and options, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "To check your order status, press 1.",
+                            "text": "For pricing information on available prescriptions, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To track your shipment, press 2.",
-                            "is_target": false,
+                            "text": "To speak with a veterinary pharmacist, press 2.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For estimated delivery times, press 3.",
+                            "text": "For a list of generic prescription options, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -169,29 +169,29 @@
         },
         {
             "number": 3,
-            "text": "For returns and exchanges, press 3.",
+            "text": "For clinic hours and location, press 3.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For return policy details, press 1.",
+                    "text": "For information on clinic opening hours, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For detailed return instructions, press 1.",
+                            "text": "For detailed clinic hours, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For return status updates, press 2.",
-                            "is_target": false,
+                            "text": "To speak with a live agent about clinic hours, press 2.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For information on return shipping, press 3.",
+                            "text": "For information on holiday hours, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -199,49 +199,49 @@
                 },
                 {
                     "number": 2,
-                    "text": "For exchange procedures, press 2.",
+                    "text": "To get directions to our clinic, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For information on exchange policies, press 1.",
+                            "text": "To hear our address, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To speak with an exchange specialist, press 2.",
-                            "is_target": true,
+                            "text": "To receive directions via SMS, press 2.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For tracking your exchange status, press 3.",
-                            "is_target": false,
+                            "text": "To speak with a representative for directions, press 3.",
+                            "is_target": true,
                             "children": []
                         }
                     ]
                 },
                 {
                     "number": 3,
-                    "text": "For status of your return or exchange, press 3.",
+                    "text": "To listen to our holiday schedule, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For tracking your return or exchange status online, press 1.",
+                            "text": "For our regular business hours, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For information on return and exchange policies, press 2.",
+                            "text": "To find our clinic location, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For assistance with return and exchange forms, press 3.",
+                            "text": "For emergency contact information, press 3.",
                             "is_target": false,
                             "children": []
                         }

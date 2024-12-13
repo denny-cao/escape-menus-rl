@@ -1,0 +1,127 @@
+{
+    "number": 1,
+    "text": "Welcome to Tech Haven Electronics, your source for the latest gadgets.",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "To speak with a customer service agent, press 1.",
+            "is_target": true,
+            "children": []
+        },
+        {
+            "number": 2,
+            "text": "For technical support, press 2 to access our automated troubleshooting guide.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For immediate assistance with a technical issue, press 1 to speak with a live customer service agent.",
+                    "is_target": true,
+                    "children": []
+                },
+                {
+                    "number": 2,
+                    "text": "To access our automated troubleshooting guide, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For product setup assistance, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For warranty information, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For software updates and downloads, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For frequently asked questions, press 3 to hear common solutions.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For device setup instructions, press 1.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For order status and tracking, press 3 to receive updates via SMS.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For assistance with your order, press 1 to speak with a customer service agent.",
+                    "is_target": true,
+                    "children": []
+                },
+                {
+                    "number": 2,
+                    "text": "For information on returns and exchanges, press 2 to hear our automated guide.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service representative about your order status, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on the return policy and procedures, press 2 to hear our automated guide.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To check the status of your return, press 3 for an automated update.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "To check our store hours and locations, press 3 for automated information.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For store hours, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For location details, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For directions to the nearest store, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
