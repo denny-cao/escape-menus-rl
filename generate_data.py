@@ -1,23 +1,28 @@
 # generate_data.py
 
 import json
+
 import os
 import re
 from typing import Optional, List
 import openai
 from pydantic import BaseModel
+
 import logging
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 openai.api_key = os.getenv("OPENAI_API_KEY")
+
+client = openai.OpenAI()
 
 class MenuNode(BaseModel):
     number: str
     text: Optional[str]
     is_target: bool
-    children: List["MenuNode"] = []
+    children: Optional[List["MenuNode"]]
 
 MenuNode.update_forward_refs()
 
@@ -209,14 +214,75 @@ def generate_menu_tree(depth: int, branching_factor: int, target_number: int) ->
                 children_nodes = generate_children(path, branching_factor=branching_factor, target_number=target_number)
 
         return MenuNode(
-            number=current_number,
-            text=current_text,
-            is_target=False,
-            children=[build_tree(path + [child.text], current_depth + 1) for child in children_nodes]
+            number=current.number,
+            text=current.text,
+            is_target=current.is_target,
+            children=[build_tree(path + [child.text], current_depth + 1, child) for child in children]
         )
-    return build_tree([], 0)
+    
+    # Build the tree starting from the root
+    return build_tree(path=[parent.text], current_depth=0, current=parent)
 
-def export_menu_tree_to_json(tree: MenuNode, filename: str):
+
+def get_next_filename(base_filename: str) -> str:
+    """
+    Get the next available filename for the menu tree JSON file.
+    Files are named as menu_tree_1.json, menu_tree_2.json, etc.
+    """
+    # Extract the base and file extension
+    base_name, ext = os.path.splitext(base_filename)
+    # Get a list of all files in the current directory matching the pattern
+    existing_files = [f for f in os.listdir('.') if re.match(rf'{re.escape(base_name)}_\d+{re.escape(ext)}', f)]
+    
+    # Extract numbers from filenames like 'menu_tree_1.json', 'menu_tree_2.json', etc.
+    existing_numbers = [
+        int(re.search(rf'{re.escape(base_name)}_(\d+){re.escape(ext)}', filename).group(1)) 
+        for filename in existing_files if re.search(rf'{re.escape(base_name)}_(\d+){re.escape(ext)}', filename)
+    ]
+    
+    # Determine the next available number
+    next_number = max(existing_numbers) + 1 if existing_numbers else 1
+    
+    # Construct the new filename
+    return f"{base_name}_{next_number}{ext}"
+
+def export_menu_tree_to_json(tree: MenuNode, base_filename: str = "menu_tree.json"):
+    """
+    Exports the menu tree to a JSON file.
+    The filename will be created in the format: menu_tree_1.json, menu_tree_2.json, etc.
+    """
+    filename = get_next_filename(base_filename)
+    print(tree)
+    json_data = tree.model_dump()
     with open(filename, "w") as file:
-        json.dump(tree.dict(), file, indent=4)
-    logger.info(f"Menu tree exported to {filename}")
+        json.dump(json_data, file, indent=4)
+    print(f"Menu tree exported to {filename}")
+
+
+if __name__ == "__main__":
+    # Define tree parameters
+    tree_depth = 3
+    branching_factor = 3
+    # Number of targets at each level (how many targets are in a node's children)
+    target_chance = 0.5
+    num = 20
+
+    # Generate the menu tree
+    roots = generate_roots(num)
+    for root in roots:
+        parent = MenuNode(
+            number=1,
+            text=root,
+            is_target=False,
+            children=[]
+        )
+        menu_tree = generate_menu_tree(
+            depth=tree_depth,
+            branching_factor=branching_factor,
+            target_chance=target_chance,
+            parent=parent
+        )
+
+        # Export to JSON
+        export_menu_tree_to_json(menu_tree, "menu_tree.json")
+
