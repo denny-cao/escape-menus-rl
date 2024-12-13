@@ -176,10 +176,12 @@ def get_next_filename(base_filename: str) -> str:
     Get the next available filename for the menu tree JSON file.
     Files are named as menu_tree_1.json, menu_tree_2.json, etc.
     """
-    # Extract the base and file extension
-    base_name, ext = os.path.splitext(base_filename)
-    # Get a list of all files in the current directory matching the pattern
-    existing_files = [f for f in os.listdir('.') if re.match(rf'{re.escape(base_name)}_\d+{re.escape(ext)}', f)]
+    # Extract the directory, base name, and extension
+    folder_name, file_name = os.path.split(base_filename)
+    base_name, ext = os.path.splitext(file_name)
+    
+    # Get a list of all files in the specified folder matching the pattern
+    existing_files = [f for f in os.listdir(folder_name) if re.match(rf'{re.escape(base_name)}_\d+{re.escape(ext)}', f)]
     
     # Extract numbers from filenames like 'menu_tree_1.json', 'menu_tree_2.json', etc.
     existing_numbers = [
@@ -190,8 +192,9 @@ def get_next_filename(base_filename: str) -> str:
     # Determine the next available number
     next_number = max(existing_numbers) + 1 if existing_numbers else 1
     
-    # Construct the new filename
-    return f"{base_name}_{next_number}{ext}"
+    # Construct the new filename in the specified folder
+    return os.path.join(folder_name, f"{base_name}_{next_number}{ext}")
+
 
 def export_menu_tree_to_json(tree: MenuNode, base_filename: str = "menu_tree.json", folder_name: str = "default"):
     """
