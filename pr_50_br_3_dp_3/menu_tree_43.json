@@ -200,12 +200,6 @@
                             "text": "For FAQs regarding the loyalty program, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the previous menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -229,113 +223,6 @@
                         {
                             "number": 3,
                             "text": "To check your loyalty account balance, press 3 for an automated response.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "number": 4,
-            "text": "For online orders and delivery, press 4.",
-            "is_target": false,
-            "children": [
-                {
-                    "number": 1,
-                    "text": "For order tracking, press 1.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To speak with a customer service representative, press 1.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For information on tracking your order, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To return to the previous menu, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "text": "For delivery issues, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For immediate assistance with delivery issues, press 1 to speak with a customer service representative.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For information on delivery policies, press 2 for an automated response.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To check the status of your delivery, press 3 for our automated system.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 3,
-                    "text": "For product inquiries, press 3.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For assistance with product availability, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To inquire about product specifications, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To speak with a customer service representative about your product inquiry, press 3.",
-                            "is_target": true,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 4,
-                    "text": "To return to the main menu, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To speak with a customer service representative about your online order, press 1.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For help with tracking your online order, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To get information about delivery options, press 3.",
                             "is_target": false,
                             "children": []
                         }

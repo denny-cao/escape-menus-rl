@@ -99,12 +99,6 @@
                             "text": "To check the status of your return online, press 3 for our website options.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For information on exchanges, press 4 for automated details.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
