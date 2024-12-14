@@ -80,7 +80,7 @@ def generate_children(path: List[str], branching_factor: int, target_chance: int
             """
         )
         completion = client.beta.chat.completions.parse(
-            model="gpt-4o-mini",
+            model="gpt-4o",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
