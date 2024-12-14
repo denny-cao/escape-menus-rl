@@ -113,6 +113,9 @@ class TrajectorySampler:
         if self.current_node is None:
             raise ValueError("Current node is not set. Call `reset()` first.")
         
+        state_text = self.current_node.get_state_text()
+        state_embedding = self.get_state_embedding(state_text)
+        
         # Select the child based on the action
         next_node = self.current_node.get_child_by_number(action)
         
@@ -121,10 +124,7 @@ class TrajectorySampler:
         
         # Update the current position in the tree
         self.current_node = next_node
-        
-        # Compute the state, reward, and done flag
-        state_text = self.current_node.get_state_text()
-        state_embedding = self.get_state_embedding(state_text)
+            
         reward = 1 if self.current_node.is_target else 0
         done = len(self.current_node.children) == 0  # Done if no more children
         
@@ -170,7 +170,6 @@ class TrajectorySampler:
         """
         self.reset()
         trajectory = []
-        trajectory.append((self.current_node.get_state_text()))
 
         for _ in range(max_steps):
             if self.current_node is None or len(self.current_node.children) == 0:
@@ -194,4 +193,4 @@ if __name__ == "__main__":
     sampler = TrajectorySampler("pr_25_br_3_dp_3")
     
     trajectory = sampler.sample_trajectory()
-    # print(trajectory)
+    print(trajectory)
