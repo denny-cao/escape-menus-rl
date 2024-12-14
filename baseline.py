@@ -3,8 +3,11 @@ import json
 import random
 from typing import List, Dict, Optional
 import openai
-from sample_trajectory import MenuNode
+from sample_trajectory import TrajectorySampler, MenuNode
+import matplotlib.pyplot as plt
+from train import train
 
+EPISODES = 20
 api_key = os.getenv("OPENAI_API_KEY")
 
 class ChatGPTBaselineAgent:
@@ -143,35 +146,48 @@ class RandomPolicyAgent:
 
         return total_reward
 
+def plot_rewards(random_rewards, rl_rewards, chatgpt_rewards=[]):
+    episodes = list(range(1, len(random_rewards) + 1))
+    
+    plt.figure(figsize=(10, 6))
+    if chatgpt_rewards:
+        plt.plot(episodes, chatgpt_rewards, label="ChatGPT Agent", marker='o')
+    plt.plot(episodes, random_rewards, label="Random Agent", marker='s')
+    plt.plot(episodes, rl_rewards, label="RL Agent", marker='^')
+    
+    plt.title("Comparison of Agent Performance")
+    plt.xlabel("Episodes")
+    plt.ylabel("Total Reward")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 if __name__ == "__main__":
-    # Run ChatGPT-based agent
-    agent = ChatGPTBaselineAgent(api_key="your_openai_api_key", json_folder="path_to_json_folder")
-    total_rewards = []
-
-    for episode in range(10):
-        reward = agent.run_episode()
-        total_rewards.append(reward)
-        print(f"ChatGPT Agent - Episode {episode + 1}: Total Reward = {reward}")
-
-    print(f"ChatGPT Agent - Average Reward: {sum(total_rewards) / len(total_rewards):.2f}")
+    
+     # Run ChatGPT-based agent
+#    agent = ChatGPTBaselineAgent(json_folder="pr_50_br_3_dp_3")
+#    total_rewards = []
+#
+#    for episode in range(EPISODES):
+#        reward = agent.run_episode()
+#        total_rewards.append(reward)
+#        print(f"ChatGPT Agent - Episode {episode + 1}: Total Reward = {reward}")
+#
+#    print(f"ChatGPT Agent - Average Reward: {sum(total_rewards) / len(total_rewards):.2f}")
 
     # Run Random policy agent
-    random_agent = RandomPolicyAgent(json_folder="path_to_json_folder")
+    random_agent = RandomPolicyAgent(json_folder="pr_25_br_3_dp_3")
     random_rewards = []
 
-    for episode in range(10):
+    # Run RL agent
+    sampler = TrajectorySampler(json_folder="pr_25_br_3_dp_3")  # Use sampler
+    theta, rl_rewards = train(N=100, T=EPISODES, delta=1e-2, sampler=sampler)
+
+
+    for episode in range(EPISODES):
         reward = random_agent.run_episode()
         random_rewards.append(reward)
         print(f"Random Agent - Episode {episode + 1}: Total Reward = {reward}")
 
     print(f"Random Agent - Average Reward: {sum(random_rewards) / len(random_rewards):.2f}")
 
-
-
-
-
-
-
-
-
-
+    plot_rewards(random_rewards, rl_rewards)
