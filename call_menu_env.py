@@ -23,14 +23,8 @@ class CallMenuEnv(gym.Env):
         # BERT-base-uncased embeddings are 768-d by default
         embedding_dim = 768
         
-        # Observation space:
-        # "children_count": shape=(1,)
-        # "text_embedding": shape=(768,)
-        # For embeddings, allow any float values: use large bounds or np.inf.
-        self.observation_space = spaces.Dict({
-            "children_count": spaces.Box(low=0, high=self.max_children, shape=(1,), dtype=np.int32),
-            "text_embedding": spaces.Box(low=-np.inf, high=np.inf, shape=(embedding_dim,), dtype=np.float32)
-        })
+        # Observation space: Dummy space; will return information within info dict
+        self.observation_space = gym.spaces.Discrete(1)
         
         # Action space is discrete with max_children possible actions (will be masked later if needed)
         self.action_space = spaces.Discrete(self.max_children)
@@ -52,15 +46,7 @@ class CallMenuEnv(gym.Env):
         return observation, info
 
     def _get_observation(self):
-        children = self._get_children(self.current_node)
-        children_count = np.array([len(children)], dtype=np.int32)
-        
-        text_embedding = self._compute_text_embedding(self.current_node["text"])
-        
-        return {
-            "children_count": children_count,
-            "text_embedding": text_embedding
-        }
+        pass
 
     def _get_info(self):
         """
@@ -68,13 +54,22 @@ class CallMenuEnv(gym.Env):
         Gym does not support dynamic action spaces, so we need to provide a mask of valid actions.
         """
 
-        children = self._get_children(self.current_node)
+        children = self._get_children(self.current_node)  # Retrieve children first
+    
         action_mask = np.zeros(self.max_children, dtype=np.int32)
         action_mask[:len(children)] = 1
-        return {
-            "text": self.current_node["text"],
-            "action_mask": action_mask
-        }
+    
+        ret = {"action_mask": action_mask}
+    
+        children_text = []
+        children_embeddings = []
+        for c in children:
+            children_text.append(c["text"])
+            children_embeddings.append(self._compute_text_embedding(c["text"]))
+        ret["children_text"] = children_text
+        ret["children_embeddings"] = children_embeddings
+    
+        return ret    
     
     def _compute_text_embedding(self, text):
         inputs = self.tokenizer(text, return_tensors='pt', truncation=True, max_length=128)
@@ -83,7 +78,7 @@ class CallMenuEnv(gym.Env):
         with torch.no_grad():
             outputs = self.model(**inputs)
         
-        cls_embedding = outputs.last_hidden_state[:,0,:].squeeze(0)
+        cls_embedding = outputs.last_hidden_state[:,0,:].squeeze(0) # CLS token
         
         cls_embedding = cls_embedding.cpu().numpy().astype(np.float32)
         return cls_embedding
