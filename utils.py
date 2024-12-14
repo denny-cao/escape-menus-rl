@@ -7,6 +7,7 @@ def compute_softmax(logits):
 
 def compute_action_distribution(theta, phi, num_actions):
     """
+
     theta: (A*M,) flattened
     phi: (M,)
     returns pi(s): (A,)
@@ -28,6 +29,7 @@ def compute_log_softmax_grad(theta, phi, action_idx, num_actions):
     """
     pi = compute_action_distribution(theta, phi, num_actions)
     A = num_actions
+
 
     e_a = np.zeros(A)
     e_a[action_idx] = 1.0

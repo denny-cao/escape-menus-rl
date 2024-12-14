@@ -1,0 +1,70 @@
+{
+    "number": 1,
+    "text": "Hello and welcome to Serenity Spa, where relaxation awaits you.",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For appointment scheduling, press 1.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For immediate assistance, press 1 to speak with a customer service representative.",
+                    "is_target": true,
+                    "children": []
+                },
+                {
+                    "number": 2,
+                    "text": "For appointment cancellations, press 2 to hear our automated process.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service representative, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For appointment rescheduling, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To hear about our spa services, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For questions about our services, press 3 for detailed information.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with your appointment, press 1 to speak with a customer service representative.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For automated information about our services, press 2 to hear a brief overview of what we offer.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For changes or cancellations to your existing appointment, press 3 to access our automated system.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

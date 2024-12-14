@@ -1,0 +1,13 @@
+{
+    "number": 1,
+    "text": "Hello and thank you for calling DriveAway Auto Dealership, your trusted partner in finding the perfect vehicle.",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For immediate assistance with vehicle sales, press 1 to speak with a sales representative.",
+            "is_target": true,
+            "children": []
+        }
+    ]
+}

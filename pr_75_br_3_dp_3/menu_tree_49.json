@@ -1,0 +1,139 @@
+{
+    "number": 1,
+    "text": "You are speaking with Bella's Beauty Bar, where beauty is our passion.",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For billing inquiries, press 1 to speak with a customer service agent immediately.",
+            "is_target": true,
+            "children": []
+        },
+        {
+            "number": 2,
+            "text": "For product information, press 2 to hear our automated response.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For assistance with your order, press 1 to speak with a customer service agent.",
+                    "is_target": true,
+                    "children": []
+                },
+                {
+                    "number": 2,
+                    "text": "For FAQs about our products, press 2 for an automated response.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with your order, press 1 to connect with a customer service representative.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information about product ingredients, press 2 to listen to our automated response.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For shipping inquiries, press 3 to hear our automated response.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "To learn about our return policy, press 3 for more information.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For information on exchanges, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To hear about our shipping options, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For details on our customer loyalty program, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "To check the status of your appointment, press 3 for a quick automated update.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "To reschedule your appointment, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service representative about rescheduling, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To receive assistance with our online booking system, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on our cancellation policy, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For questions about our services, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For service pricing information, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a customer service representative about our services, press 2.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on our products, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "If you would like to speak with a customer service agent, press 3.",
+                    "is_target": true,
+                    "children": []
+                }
+            ]
+        }
+    ]
+}

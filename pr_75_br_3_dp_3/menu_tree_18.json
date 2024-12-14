@@ -1,0 +1,158 @@
+{
+    "number": 1,
+    "text": "Thank you for calling Fresh Fields Grocery Store, your source for quality and freshness!",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For immediate assistance with your order, press 1 to speak to a customer service representative.",
+            "is_target": true,
+            "children": []
+        },
+        {
+            "number": 2,
+            "text": "For store hours and locations, press 2 to hear our automated response.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For store hours, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For inquiries about store hours, press 1 to hear our automated response.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak directly with a customer service agent about store hours, press 2.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For location inquiries, press 3 to hear our automated response.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For store locations, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For assistance with store hours, press 1 to speak with a customer service representative.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on our delivery services, press 2 to hear our automated options.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To learn about our current promotions, press 3 for more details from our automated system.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For information on our services, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For product inquiries, press 1 to speak with a customer service representative.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For questions about our loyalty program, press 2 for automated information.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For questions regarding online orders, press 3 for automated assistance.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For questions about our loyalty program, press 3 for more information.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For inquiries about your loyalty points, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak directly with a customer service representative, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on how to redeem your loyalty points, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To check your current loyalty points balance, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To update your loyalty program information, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To check your loyalty points balance, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To update your contact information, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To learn more about our rewards program, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "To speak directly with a customer service representative, press 3.",
+                    "is_target": true,
+                    "children": []
+                }
+            ]
+        }
+    ]
+}

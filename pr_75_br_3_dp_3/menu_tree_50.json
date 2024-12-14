@@ -1,0 +1,158 @@
+{
+    "number": 1,
+    "text": "Thank you for contacting Home Comfort Furniture, where style meets comfort.",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For immediate assistance with your order, press 1 to connect with a customer service agent.",
+            "is_target": true,
+            "children": []
+        },
+        {
+            "number": 2,
+            "text": "To check the status of your delivery, press 2 to hear automated updates.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For delivery updates, press 1 to hear the latest status of your order.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For estimated delivery times, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To change your delivery address, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For questions about delivery policies, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For estimated delivery times, press 2 to get an automated response.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with your order, press 1 to speak with a customer service representative.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To hear more about our delivery policies, press 2 for an automated message.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For changes to your delivery address, press 3 to access our self-service options.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For issues with your delivery, press 3 to receive troubleshooting tips.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with delivery issues, press 1 to connect with a customer service representative.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To receive troubleshooting tips for your delivery issue, press 2 to listen to automated guidance.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information on rescheduling your delivery, press 3 for automated options.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For information about our furniture care tips, press 3 to receive a recorded message.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For inquiries about our warranty policies, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For general warranty questions, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak to a customer service representative regarding your warranty, press 2.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For warranty claims and processing, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To speak with a customer service representative, press 2.",
+                    "is_target": true,
+                    "children": []
+                },
+                {
+                    "number": 3,
+                    "text": "For our latest promotions and offers, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service agent about furniture care, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For recorded care tips and maintenance advice, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To hear about our warranty and service options, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
