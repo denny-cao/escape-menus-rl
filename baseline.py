@@ -7,7 +7,8 @@ from sample_trajectory import TrajectorySampler, MenuNode
 import matplotlib.pyplot as plt
 from train import train
 
-EPISODES = 20
+EPISODES = 100
+N = 500
 api_key = os.getenv("OPENAI_API_KEY")
 
 class ChatGPTBaselineAgent:
@@ -130,21 +131,22 @@ class RandomPolicyAgent:
         reward = 1 if self.current_node.is_target else 0
         return reward
 
-    def run_episode(self, max_steps: int = 10) -> int:
-        self.load_random_menu_tree()
+    def run_episode(self, N, max_steps: int = 10) -> float:
         total_reward = 0
+        for i in range(N):
+            self.load_random_menu_tree()
+            for _ in range(max_steps):
+                reward = self.step()
+                if reward is None:
+                    break
 
-        for _ in range(max_steps):
-            reward = self.step()
-            if reward is None:
-                break
+                total_reward += reward
 
-            total_reward += reward
+                if len(self.current_node.children) == 0:
+                    break
 
-            if len(self.current_node.children) == 0:  # End if no more children
-                break
+        return total_reward / N
 
-        return total_reward
 
 def plot_rewards(random_rewards, rl_rewards, chatgpt_rewards=[]):
     episodes = list(range(1, len(random_rewards) + 1))
@@ -180,11 +182,11 @@ if __name__ == "__main__":
 
     # Run RL agent
     sampler = TrajectorySampler(json_folder="pr_25_br_3_dp_3")  # Use sampler
-    theta, rl_rewards = train(N=100, T=EPISODES, delta=1e-2, sampler=sampler)
+    theta, rl_rewards = train(N=N, T=EPISODES, delta=1e-2, sampler=sampler)
 
 
     for episode in range(EPISODES):
-        reward = random_agent.run_episode()
+        reward = random_agent.run_episode(N=N)
         random_rewards.append(reward)
         print(f"Random Agent - Episode {episode + 1}: Total Reward = {reward}")
 
