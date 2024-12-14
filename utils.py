@@ -13,11 +13,11 @@ def extract_features(state, num_actions):
     :return: phi(s,a) for all the actions (shape d x |num_actions|)
     """
     s = state.reshape(1, -1)
-    s = np.repeat(s, num_actions, 0)  # Repeat state for each action
-    a = np.arange(0, num_actions).reshape(-1, 1)  # Action indices
-    sa = np.concatenate([s, a], axis=-1)  # Concatenate state-action pairs
-    feats = rbf_feature.fit_transform(sa)  # Get RFF features
-    feats = feats.T  # Transpose to match d x |num_actions|
+    s = np.repeat(s, num_actions, 0)
+    a = np.arange(0, num_actions).reshape(-1, 1)
+    sa = np.concatenate([s, a], axis=-1)
+    feats = rbf_feature.fit_transform(sa)
+    feats = feats.T
     return feats
 
 
