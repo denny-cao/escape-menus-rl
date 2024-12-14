@@ -1,88 +1,82 @@
-from sklearn.kernel_approximation import RBFSampler
 import numpy as np
 
-rbf_feature = RBFSampler(gamma=1, random_state=12345)
+def compute_softmax(logits):
+    max_logit = np.max(logits)
+    exp_logits = np.exp(logits - max_logit)
+    return exp_logits / np.sum(exp_logits)
 
-
-def extract_features(state, num_actions):
-    """ 
-    This function computes the RFF features for a BERT embedding state for all the discrete actions
-
-    :param state: BERT embedding of the state (shape (embedding_dim,))
-    :param num_actions: number of discrete actions to compute the RFF features for
-    :return: phi(s,a) for all the actions (shape d x |num_actions|)
+def compute_action_distribution(theta, phi, num_actions):
     """
-    s = state.reshape(1, -1)
-    s = np.repeat(s, num_actions, 0)  # Repeat state for each action
-    a = np.arange(0, num_actions).reshape(-1, 1)  # Action indices
-    sa = np.concatenate([s, a], axis=-1)  # Concatenate state-action pairs
-    feats = rbf_feature.fit_transform(sa)  # Get RFF features
-    feats = feats.T  # Transpose to match d x |num_actions|
-    return feats
+    theta: (A*M,) flattened
+    phi: (M,)
+    returns pi(s): (A,)
+    """
+    A = num_actions
+    M = phi.shape[0]
+    Theta = theta.reshape(A, M)  # A x M
+    z = Theta.dot(phi)  # (A,)
+    pi = compute_softmax(z)
+    return pi
 
+def compute_log_softmax_grad(theta, phi, action_idx, num_actions):
+    """
+    grad = (e_a - pi(s)) * phi(s)^T
+    Shape:
+      (e_a - pi) is (A,)
+      phi(s) is (M,)
+    outer product is (A, M) then flatten to (A*M, 1). see paper for more details
+    """
+    pi = compute_action_distribution(theta, phi, num_actions)
+    A = num_actions
 
-def compute_softmax(logits, axis):
-    """ computes the softmax of the logits """
-    logits -= np.max(logits, axis=axis, keepdims=True)
-    exp_logits = np.exp(logits)
-    softmax = exp_logits / np.sum(exp_logits, axis=axis, keepdims=True)
-    return softmax
+    e_a = np.zeros(A)
+    e_a[action_idx] = 1.0
 
-
-def compute_action_distribution(theta, phis):
-    """ compute probability distribution over actions """
-    logits = np.dot(phis.T, theta)  # Shape: (num_actions, 1)
-    return compute_softmax(logits, axis=0).T
-
-
-def compute_log_softmax_grad(theta, phis, action_idx):
-    """ computes the log softmax gradient for the action with index action_idx """
-    action_dist = compute_action_distribution(theta, phis)
-    expected_phi = np.dot(action_dist, phis.T)  # Shape: (d,)
-    grad = phis[:, action_idx].reshape(-1, 1) - expected_phi.T  # Shape: (d, 1)
+    diff = e_a - pi  # (A,)
+    grad_matrix = np.outer(diff, phi)  # (A x M)
+    grad = grad_matrix.flatten()[:, np.newaxis]  # (A*M, 1)
     return grad
-
 
 def compute_fisher_matrix(grads, lamb=1e-3):
     """ computes the fisher information matrix using the sampled trajectories gradients """
     d = grads[0][0].shape[0]
-    fisher_matrix = np.zeros((d, d))  # Initialize Fisher matrix
+    fisher_matrix = np.zeros((d, d))
 
     for trajectory in grads:
         trajectory_fisher = np.zeros((d, d))
         for grad in trajectory:
             trajectory_fisher += np.dot(grad, grad.T)
-        trajectory_fisher /= len(trajectory)  # Average over time steps
+        trajectory_fisher /= len(trajectory)  # Average over steps
         fisher_matrix += trajectory_fisher
 
     fisher_matrix /= len(grads)  # Average over trajectories
-    fisher_matrix += lamb * np.eye(d)  # Add regularization
+    fisher_matrix += lamb * np.eye(d)
     return fisher_matrix
-
 
 def compute_value_gradient(grads, rewards):
     """ computes the value function gradient with respect to the sampled gradients and rewards """
     N = len(grads)
-    total_rewards = [sum(trajectory_rewards) for trajectory_rewards in rewards]
+    total_rewards = [sum(traj_rewards) for traj_rewards in rewards]
     b = np.mean(total_rewards)
-    value_gradient = np.zeros(grads[0][0].shape)
-    
+
+    d = grads[0][0].shape[0]
+    value_gradient = np.zeros((d, 1))
+
     for i in range(N):
-        trajectory_sum = np.zeros(grads[0][0].shape)
+        trajectory_sum = np.zeros((d, 1))
         trajectory_gradients = grads[i]
         trajectory_rewards = rewards[i]
         H = len(trajectory_gradients)
-        
+
         for h in range(H):
             reward_sum = np.sum(trajectory_rewards[h:])
             trajectory_sum += trajectory_gradients[h] * (reward_sum - b)
-        
+
         trajectory_sum /= H
         value_gradient += trajectory_sum
-    
+
     value_gradient /= N
     return value_gradient
-
 
 def compute_eta(delta, fisher, v_grad):
     """ computes the learning rate for gradient descent """

@@ -1,10 +1,9 @@
 import numpy as np
-import utils
 import matplotlib.pyplot as plt
-from sample_trajectory import TrajectorySampler  # Use TrajectorySampler instead of gym
+from sample_trajectory import TrajectorySampler
+import utils
 
-
-def sample(theta, sampler, N):
+def sample(theta, sampler, N, num_actions):
     total_rewards = []
     total_grads = []
 
@@ -14,8 +13,8 @@ def sample(theta, sampler, N):
         grads = []
         
         for state, action, reward in trajectory:
-            phis = utils.extract_features(state.numpy(), num_actions=4)  # Convert to NumPy
-            grad = utils.compute_log_softmax_grad(theta, phis, action)  
+            phi = state.numpy()  # (M,)
+            grad = utils.compute_log_softmax_grad(theta, phi, action, num_actions)
             rewards.append(reward)
             grads.append(grad)
         
@@ -24,40 +23,35 @@ def sample(theta, sampler, N):
 
     return total_grads, total_rewards
 
+def train(N, T, delta, sampler, num_actions=4, lamb=1e-3):
+    # Initialize theta based on the embedding dimension
+    init_state = sampler.reset()  # returns torch.Tensor
+    M = init_state.shape[0]
 
-def train(N, T, delta, sampler, lamb=1e-3):
-    theta = np.random.rand(100, 1)  # Initialize policy parameters
+    theta = np.random.randn(num_actions * M)  # Flattened parameter vector of size A*M
     episode_rewards = []
 
     for t in range(T):
-        # 1. Sample N trajectories
-        grads, rewards = sample(theta, sampler, N)
+        grads, rewards = sample(theta, sampler, N, num_actions)
         
-        # 2. Compute the Fisher matrix
         fisher_matrix = utils.compute_fisher_matrix(grads, lamb)
-        
-        # 3. Compute the policy gradient
         v_grad = utils.compute_value_gradient(grads, rewards)
-        
-        # 4. Compute the step size
         eta = utils.compute_eta(delta, fisher_matrix, v_grad)
-        
-        # 5. Update the model parameters by taking an NPG step
+
         fisher_inv = np.linalg.inv(fisher_matrix)
-        theta += eta * np.dot(fisher_inv, v_grad)
+        theta += (eta * np.dot(fisher_inv, v_grad)).flatten()
         
-        avg_reward = np.mean([sum(trajectory_rewards) for trajectory_rewards in rewards])
+        avg_reward = np.mean([sum(traj) for traj in rewards])
         episode_rewards.append(avg_reward)
-        print(f"Iteration {t+1}: Avg Reward = {avg_reward:.2f}, Loss = {np.linalg.norm(v_grad):.2f}")
-    
+        print(f"Iteration {t+1}: Avg Reward = {avg_reward:.2f}, ||v_grad|| = {np.linalg.norm(v_grad):.2f}")
+
     return theta, episode_rewards
 
-
 if __name__ == '__main__':
-    sampler = TrajectorySampler(json_folder="pr_25_br_3_dp_3")  # Use sampler
+    sampler = TrajectorySampler(json_folder="pr_25_br_3_dp_3")
     theta, episode_rewards = train(N=100, T=20, delta=1e-2, sampler=sampler)
     plt.plot(episode_rewards)
-    plt.title("Average Rewards per Timestep")
-    plt.xlabel("Timestep")
+    plt.title("Average Rewards per Iteration")
+    plt.xlabel("Iteration")
     plt.ylabel("Average Rewards")
     plt.show()
