@@ -3,176 +3,232 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.distributions import Categorical
-from call_menu_env import CallMenuEnv
+from sklearn.kernel_approximation import RBFSampler
 
 class PolicyNetwork(nn.Module):
-    def __init__(self, input_dim, action_dim):
+    def __init__(self, feature_dim, action_dim):
         super(PolicyNetwork, self).__init__()
-        self.fc1 = nn.Linear(input_dim, 128)
+        self.fc1 = nn.Linear(feature_dim, 128)
         self.fc2 = nn.Linear(128, action_dim)
 
-    def forward(self, x):
-        x = torch.relu(self.fc1(x))
+    def forward(self, features):
+        x = torch.relu(self.fc1(features))
         logits = self.fc2(x)
         return logits
 
 class NPGAgent:
-    def __init__(self, observation_space, action_space, lr=1e-3, gamma=0.99, device="cpu"):
+    def __init__(self, feature_dim, action_dim, gamma=0.99, lamb=1e-3, delta=1e-2, device="cpu"):
         self.gamma = gamma
+        self.lamb = lamb
+        self.delta = delta
         self.device = device
 
-        input_dim = observation_space["text_embedding"].shape[0]
-        action_dim = action_space.n
+        self.policy_network = PolicyNetwork(feature_dim, action_dim).to(device)
 
-        self.policy_network = PolicyNetwork(input_dim, action_dim).to(device)
-        self.optimizer = optim.Adam(self.policy_network.parameters(), lr=lr)
+    def compute_action_distribution(self, theta, features):
+        logits = features.T @ theta
+        return torch.softmax(logits, dim=1)
 
-    def select_action(self, observation, action_mask):
-        text_embedding = torch.tensor(observation["text_embedding"], dtype=torch.float32).to(self.device)
+    def compute_log_softmax_grad(self, theta, features, action_idx):
+        probs = self.compute_action_distribution(theta, features)
+        grad = features[:, action_idx] - torch.sum(features * probs, dim=1, keepdim=True)
+        return grad
 
-        logits = self.policy_network(text_embedding)
-        masked_logits = logits + (1 - torch.tensor(action_mask, dtype=torch.float32).to(self.device)) * -1e9 # Mask logits of invalid actions
+    def compute_fisher_matrix(self, grads):
+        d = grads[0][0].shape[0]
+        fisher = torch.zeros((d, d), device=self.device)
+        for traj_grads in grads:
+            for grad in traj_grads:
+                fisher += grad @ grad.T / len(traj_grads)
+        fisher /= len(grads)
+        fisher += self.lamb * torch.eye(d, device=self.device)
+        return fisher
 
-        probs = torch.softmax(masked_logits, dim=-1)
-        probs_categorical = Categorical(probs)
-        action = probs_categorical.sample()
-        log_prob = probs_categorical.log_prob(action)
+    def compute_value_gradient(self, grads, rewards):
+        N = len(grads)
+        b = torch.mean(torch.tensor([torch.sum(r) for r in rewards], device=self.device, dtype=torch.float32))
+        v_grad = torch.zeros(grads[0][0].shape, device=self.device, dtype=torch.float32)
+        for traj_grads, traj_rewards in zip(grads, rewards):
+            for t, grad in enumerate(traj_grads):
+                discounted_reward = torch.sum(torch.tensor(traj_rewards[t:], device=self.device, dtype=torch.float32))
+                v_grad += (discounted_reward - b) * grad / len(traj_grads)
+        return v_grad / N
 
-        return action.item(), log_prob
+    def compute_eta(self, fisher, v_grad):
+        eta = torch.sqrt(self.delta / (v_grad.T @ torch.linalg.inv(fisher) @ v_grad + self.delta))
+        return eta.item()
 
-    def update_policy(self, rewards, log_probs):
-        discounted_rewards = []
-        R = 0
-        for reward in reversed(rewards):
-            R = reward + self.gamma * R
-            discounted_rewards.insert(0, R)
+    def train_step(self, theta, trajectories, rewards):
+        grads = []
+        for traj in trajectories:
+            traj_grads = []
+            for state, action in traj:
+                features = torch.tensor(state, dtype=torch.float32, device=self.device)
+                grad = self.compute_log_softmax_grad(theta, features, action)
+                traj_grads.append(grad)
+            grads.append(traj_grads)
 
-        discounted_rewards = torch.tensor(discounted_rewards, dtype=torch.float32).to(self.device)
-        discounted_rewards = (discounted_rewards - discounted_rewards.mean()) / (discounted_rewards.std() + 1e-8)
+        fisher = self.compute_fisher_matrix(grads)
+        v_grad = self.compute_value_gradient(grads, rewards)
+        eta = self.compute_eta(fisher, v_grad)
 
-        policy_loss = torch.stack([-log_prob * reward for log_prob, reward in zip(log_probs, discounted_rewards)]).sum()
-
-        self.optimizer.zero_grad()
-        policy_loss.backward()
-        self.optimizer.step()
+        theta += eta * torch.linalg.inv(fisher) @ v_grad
+        return theta
 
 if __name__ == "__main__":
+    from call_menu_env import CallMenuEnv
+    import utils
+
+    class CallMenuEnvWrapper:
+        def __init__(self, env):
+            self.env = env
+
+        def reset(self):
+            obs, info = self.env.reset()
+            return utils.flatten_observation(obs), info["action_mask"]
+
+        def step(self, action):
+            obs, reward, done, truncated, info = self.env.step(action)
+            return utils.flatten_observation(obs), reward, done, info["action_mask"]
     menu = {
-        "number": 1,
-        "text": "Welcome to our service.",
-        "is_target": False,
-        "children": [
-            {
-                "number": 1,
-                "text": "For customer service representative, press 1.",
-                "is_target": False,
-                "children": [
-                    {
-                        "number": 1,
-                        "text": "For technical support, press 1.",
-                        "is_target": False,
-                        "children": [
-                            {
-                                "number": 1,
-                                "text": "For software related issues, press 1.",
-                                "is_target": False,
-                                "children": []
-                            },
-                            {
-                                "number": 2,
-                                "text": "For hardware related issues, press 2.",
-                                "is_target": False,
-                                "children": []
-                            },
-                            {
-                                "number": 3,
-                                "text": "To speak directly with a technical support representative, press 3.",
-                                "is_target": True,
-                                "children": []
-                            }
-                        ]
-                    },
-                    {
-                        "number": 2,
-                        "text": "For billing inquiries, press 2.",
-                        "is_target": False,
-                        "children": [
-                            {
-                                "number": 1,
-                                "text": "For general billing questions, press 1.",
-                                "is_target": False,
-                                "children": []
-                            },
-                            {
-                                "number": 2,
-                                "text": "For specific invoice queries, press 2.",
-                                "is_target": False,
-                                "children": []
-                            },
-                            {
-                                "number": 3,
-                                "text": "For payment methods, press 3.",
-                                "is_target": False,
-                                "children": []
-                            }
-                        ]
-                    },
-                    {
-                        "number": 3,
-                        "text": "For questions about our products, press 3.",
-                        "is_target": False,
-                        "children": [
-                            {
-                                "number": 1,
-                                "text": "For information about product warranties, press 1.",
-                                "is_target": False,
-                                "children": []
-                            },
-                            {
-                                "number": 2,
-                                "text": "To speak with a product specialist, press 2.",
-                                "is_target": False,
-                                "children": []
-                            },
-                            {
-                                "number": 3,
-                                "text": "For information about product returns, press 3.",
-                                "is_target": False,
-                                "children": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-    env = CallMenuEnv(menu, max_children=10)
-    obs, info = env.reset()
+    "number": 1,
+    "text": "Welcome to our service.",
+    "is_target": False,
+    "children": [
+        {
+            "number": 1,
+            "text": "For customer service representative, press 1.",
+            "is_target": False,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For technical support, press 1.",
+                    "is_target": False,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For software related issues, press 1.",
+                            "is_target": False,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For hardware related issues, press 2.",
+                            "is_target": False,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To speak directly with a technical support representative, press 3.",
+                            "is_target": False,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For billing inquiries, press 2.",
+                    "is_target": False,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For general billing questions, press 1.",
+                            "is_target": False,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For specific invoice queries, press 2.",
+                            "is_target": False,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For payment methods, press 3.",
+                            "is_target": False,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For questions about our products, press 3.",
+                    "is_target": False,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For information about product warranties, press 1.",
+                            "is_target": False,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To speak with a product specialist, press 2.",
+                            "is_target": False,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information about product returns, press 3.",
+                            "is_target": False,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]}
+    env = CallMenuEnv(menu)
+    env = CallMenuEnvWrapper(env)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    agent = NPGAgent(env.observation_space, env.action_space, device=device)
+    rbf_feature = RBFSampler(gamma=1, random_state=12345)
 
+    feature_dim = 100
+    action_dim = env.env.action_space.n
+    agent = NPGAgent(feature_dim, action_dim, device=device)
+
+    theta = torch.randn(feature_dim, action_dim, device=device, dtype=torch.float32)
     num_episodes = 1000
+    trajectories = []
+    rewards = []
+
     for episode in range(num_episodes):
-        obs, info = env.reset()
+        state, action_mask = env.reset()
         done = False
 
-        rewards = []
-        log_probs = []
+        episode_rewards = []
+        episode_trajectory = []
+        
+    while not done:
+        features = utils.extract_features(state, action_dim).astype(np.float32)
+        logits = theta.T @ torch.tensor(features, device=device, dtype=torch.float32)
+        probs = torch.softmax(logits, dim=0).squeeze().cpu().numpy()
+    
+        # Mask invalid actions
+        probs = probs * action_mask  # Zero out probabilities of invalid actions
+        if probs.sum() == 0:  # Avoid divide-by-zero
+            probs = action_mask / action_mask.sum()  # Uniformly distribute over valid actions
+        else:
+            probs = probs / probs.sum()  # Normalize probabilities
+    
+        action = np.random.choice(action_dim, p=probs)
+        state, reward, done, action_mask = env.step(action)
+    
+        episode_rewards.append(reward)
+        episode_trajectory.append((features, action))
 
-        while not done:
-            action_mask = info["action_mask"]
-            action, log_prob = agent.select_action(obs, action_mask)
+        trajectories.append(episode_trajectory)
+        rewards.append(episode_rewards)
 
-            print(f"Action: {action}")
+        trajectories.append(episode_trajectory)
+        rewards.append(episode_rewards)
 
-            obs, reward, done, truncated, info = env.step(action)
-
-            rewards.append(reward)
-            log_probs.append(log_prob)
-
-        agent.update_policy(rewards, log_probs)
+        if len(trajectories) >= 100:
+            theta = agent.train_step(theta, trajectories, rewards)
+            trajectories = []
+            rewards = []
 
         if episode % 100 == 0:
-            print(f"Episode {episode}: Total Reward: {sum(rewards)}")
-
+            avg_reward = np.mean([np.sum(r) for r in rewards])
+            print(f"Episode {episode}: Average Reward: {avg_reward}")
