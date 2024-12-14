@@ -14,8 +14,8 @@ def sample(theta, sampler, N):
         grads = []
         
         for state, action, reward in trajectory:
-            phis = utils.extract_features(state.numpy(), num_actions=4)  # Convert to NumPy
-            grad = utils.compute_log_softmax_grad(theta, phis, action)  
+            phis = utils.extract_features(state.numpy(), num_actions=3)  # Convert to NumPy
+            grad = utils.compute_log_softmax_grad(theta, phis, action - 1)
             rewards.append(reward)
             grads.append(grad)
         
@@ -55,7 +55,7 @@ def train(N, T, delta, sampler, lamb=1e-3):
 
 if __name__ == '__main__':
     sampler = TrajectorySampler(json_folder="pr_25_br_3_dp_3")  # Use sampler
-    theta, episode_rewards = train(N=100, T=20, delta=1e-2, sampler=sampler)
+    theta, episode_rewards = train(N=100, T=50, delta=1e-2, sampler=sampler)
     plt.plot(episode_rewards)
     plt.title("Average Rewards per Timestep")
     plt.xlabel("Timestep")
