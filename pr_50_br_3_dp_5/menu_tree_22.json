@@ -1,0 +1,1234 @@
+{
+    "number": 1,
+    "text": "Welcome to Fresh Threads Clothing Boutique, how can we assist you today?",
+    "is_target": false,
+    "children": [
+        {
+            "number": 1,
+            "text": "For order status inquiries, press 1.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For tracking your order, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service agent, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on returns and exchanges, press 2.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "For immediate assistance with your return or exchange, press 1 to speak with a customer service representative.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For our return policy details, press 2 to listen to our automated response.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For details on how to initiate a return, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For information on exchange procedures, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To hear about our refund timeline, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "For information on how to initiate a return online, press 3 to receive step-by-step instructions.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For information on return policies, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For assistance with exchanges, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For FAQs about returns, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "text": "To hear FAQs regarding shipping, press 3.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To hear FAQs regarding returns, press 1.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For information on our return policy, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To check the status of a return, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For assistance with a damaged item, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "To hear FAQs regarding exchanges, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For information on our shipping policies, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For information on our return policies, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For information on our customer loyalty program, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To hear FAQs regarding payment options, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For immediate assistance with your payment issues, press 1 to speak with a representative.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For detailed information about our payment methods, press 2 to listen to an automated response.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To check the status of your recent payment, press 3 for FAQs.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "For information on our return policy, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with your order status, press 1 to speak with a customer service agent.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For automated updates on your order status, press 2.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To speak with a live representative about your order status, press 1.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For automated information regarding your return policy, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To speak with a live customer service agent regarding your order status, press 1.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For automated updates on your order, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For FAQs about our return policy, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To hear frequently asked questions about order status, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For immediate assistance with your order status, press 1 to speak with a customer service representative.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For automated updates on your order status, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To hear frequently asked questions about order status, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "text": "To hear our frequently asked questions about order status, press 3.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To speak with a customer service representative about your order status, press 1.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For automated order status updates, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For updates on your order delivery, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To check the status of a return, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For tracking information, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To get details on tracking your order via SMS, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To speak with a customer service agent regarding your order, press 1.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For updates on your shipment status, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To receive automated tracking updates via email, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For FAQs about shipping, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with your order, press 1 to speak with a customer service agent.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For tracking your order status, press 2 to receive an automated update via SMS or email.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To speak with a customer service agent about your order status, press 1.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For an automated response regarding your order status, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For immediate assistance with your order status, press 1 to speak with a customer service agent.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For information on shipping policies, press 2 to hear our automated message.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For details on returns and exchanges, press 3 for our FAQ section.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To return to the main menu, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To check the status of your return request, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To receive detailed shipping FAQs, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To hear about our return policy, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "text": "For information regarding shipping policies and times, press 3 to listen to our recorded message.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "For immediate assistance with your order, press 1 to speak with a customer service agent.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For tracking your shipment, press 2 to receive automated updates.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To speak directly to a customer service agent, press 1.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For information on our return policy, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To get tips on sizing and fit, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "For information on shipping costs, press 3 to hear our recorded message.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To speak with a customer service representative, press 1.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For tracking your order, press 2 to receive automated updates.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For information about our return policy, press 3 for an automated guide.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "text": "To track your shipment, press 2.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For live assistance with tracking your shipment, press 1.",
+                    "is_target": true,
+                    "children": []
+                },
+                {
+                    "number": 2,
+                    "text": "To check the status of your order online, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For immediate assistance with your order, press 1 to speak with a customer service representative.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To receive updates about your order via text message, press 2.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To speak with a customer service representative, press 1.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "To get your tracking number via email, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To receive the tracking number, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To speak with our automated assistant for further assistance, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To return to the main menu, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "For FAQs about order updates, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To view our shipping policy, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To learn about estimated delivery times, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To find answers to common questions, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "text": "For FAQs regarding our shipping policies, press 3.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "For information on shipping times, press 1.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For immediate assistance with your order, press 1 to speak with a live agent.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To get detailed information about our shipping options, press 2 for automated responses.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For questions about international shipping, press 3 to hear our recorded message.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "To learn about our return policy, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For assistance with your return, press 1 to speak with a representative.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For automated return instructions, press 2 to receive a text message.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To hear about our return policy details, press 3 for recorded information.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "For assistance with lost shipments, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To speak with a customer service representative, press 1.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For information on our shipping policies, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To get updates on your shipment via email, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For information on shipping policies, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service representative, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For automated tracking updates, press 2.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "For immediate assistance with your order, press 1 to speak to a customer service representative.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "To check the status of your shipment through our automated system, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To speak with a live customer service representative, press 1.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For tracking updates via email, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To get shipping updates via SMS, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "For FAQs regarding shipping policies, press 3 to receive more information.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For tracking updates, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For estimated delivery times, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For shipping cost inquiries, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "text": "To hear about our shipping rates and policies, press 3.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To check the status of your order, press 1.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To hear about our shipping rates, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To learn about international shipping options, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To get estimated delivery times, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For details on our return policies, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For assistance with your return, press 1 to speak with a customer service representative.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To check the status of your return, press 2 for automated updates.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For information on return shipping labels, press 3 for our self-service options.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To receive information on international shipping, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For standard shipping rates, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For expedited shipping options, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For tracking international shipments, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "text": "For returns and exchanges information, press 3.",
+            "is_target": false,
+            "children": [
+                {
+                    "number": 1,
+                    "text": "For information on our return policy, press 1.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service representative about your return, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information regarding the steps to process a return, press 2.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To speak with a customer service representative about your return, press 1.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For tracking your return status, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For questions about your return status, press 1 to speak with a customer service agent.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For automated updates on your return status, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To hear about common return issues, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To hear our frequently asked questions about returns, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To speak with a customer service representative about your return, press 1.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For a list of items eligible for return, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To hear the estimated processing time for returns, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 4,
+                                    "text": "",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For immediate assistance with your return, press 1 to speak with a customer service agent.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For information on how to track your return status, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To hear about our exchange policy, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "text": "To check the status of your return, press 3.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To speak with a customer service representative, press 1.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For information on the estimated time for your return processing, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For information on our return processing times, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To learn about our return shipping methods, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For assistance with tracking your return, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To hear our frequently asked questions about returns, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For information about our return process, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To hear about our exchange policy, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To get tips on how to package your return, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 4,
+                                            "text": "To return to the main menu, press 4.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To initiate a return, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "For live assistance with your return, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "To check the status of your return, press 2.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "For questions about your return status, press 1.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For updates on your return, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To inquire about return policies, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To speak with our returns department, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "To get information on our return policy, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For information on the return process, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To find out how to package your return, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For tracking your return shipment, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To speak with a customer service agent about your return, press 3.",
+                                    "is_target": true,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "text": "For FAQs about returns, press 3.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "For immediate assistance with your return, press 1 to speak with a customer service representative.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For information on our return policy, press 2 to hear an automated message.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For assistance with your return, press 1 to speak with a customer service representative.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For details about the return shipping process, press 2 to hear an automated message.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To learn about our return processing times, press 3 for more information.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To check the status of your return, press 3 for our automated system.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For information on return policies, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To track your return shipment, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For common questions about exchanges, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "number": 3,
+                    "text": "For exchange options, press 3.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To speak with a customer service representative about your exchange, press 1.",
+                            "is_target": true,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For information on our exchange policy, press 2.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To speak with a customer service agent about your exchange, press 1.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "For information about our exchange process, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For assistance with your exchange, press 1 to speak with a customer service representative.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "For information on how to initiate an exchange, press 2 for automated guidance.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To check the status of your exchange request, press 3 for automated updates.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "To check the status of your exchange request, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "For information on our exchange process, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To review the items eligible for exchange, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To request a return shipping label, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "number": 3,
+                            "text": "To check the status of your exchange, press 3.",
+                            "is_target": false,
+                            "children": [
+                                {
+                                    "number": 1,
+                                    "text": "To speak with a customer service representative regarding your exchange status, press 1.",
+                                    "is_target": true,
+                                    "children": []
+                                },
+                                {
+                                    "number": 2,
+                                    "text": "To hear information about our exchange policies, press 2.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To speak with a customer service representative about your exchange, press 1.",
+                                            "is_target": true,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To hear about our exchange timelines and procedures, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "For FAQs regarding exchanges, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "number": 3,
+                                    "text": "For automated updates on your exchange status, press 3.",
+                                    "is_target": false,
+                                    "children": [
+                                        {
+                                            "number": 1,
+                                            "text": "To receive an automated update via email, press 1.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 2,
+                                            "text": "To hear the estimated processing time for your exchange, press 2.",
+                                            "is_target": false,
+                                            "children": []
+                                        },
+                                        {
+                                            "number": 3,
+                                            "text": "To return to the main menu, press 3.",
+                                            "is_target": false,
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

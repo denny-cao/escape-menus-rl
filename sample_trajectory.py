@@ -189,7 +189,7 @@ class TrajectorySampler:
 
 
 if __name__ == "__main__":
-    sampler = TrajectorySampler("pr_25_br_3_dp_3")
+    sampler = TrajectorySampler("pr_50_br_3_dp_3")
     
     trajectory = sampler.sample_trajectory()
     print(trajectory)

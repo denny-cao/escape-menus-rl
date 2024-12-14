@@ -80,7 +80,7 @@ def generate_children(path: List[str], branching_factor: int, target_chance: int
             """
         )
         completion = client.beta.chat.completions.parse(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
@@ -213,11 +213,11 @@ def export_menu_tree_to_json(tree: MenuNode, base_filename: str = "menu_tree.jso
 
 if __name__ == "__main__":
     # Define tree parameters
-    tree_depth = 3
+    tree_depth = 5
     branching_factor = 3
     # Number of targets at each level (how many targets are in a node's children)
-    target_chance = 0.25
-    num = 269
+    target_chance = 0.5
+    num = 100
     folder_name = f"pr_{int(target_chance * 100)}_br_{branching_factor}_dp_{tree_depth}"
 
     # Generate the menu roots

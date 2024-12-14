@@ -30,12 +30,6 @@
                             "text": "To hear about our daily specials, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

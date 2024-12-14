@@ -1,33 +1,33 @@
 {
     "number": 1,
-    "text": "Thank you for calling Family Values Grocery Store.",
+    "text": "Welcome to Style & Grace Boutique, how can we assist you today?",
     "is_target": false,
     "children": [
         {
             "number": 1,
-            "text": "For store hours and locations, press 1.",
+            "text": "For order status updates, press 1.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For store hours, press 1.",
+                    "text": "For tracking your order, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For Monday to Friday store hours, press 1.",
-                            "is_target": false,
+                            "text": "For immediate assistance with your order, press 1 to speak with a customer service agent.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For Saturday store hours, press 2.",
+                            "text": "To receive your order status via SMS, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For Sunday store hours, press 3.",
+                            "text": "For FAQs regarding order tracking, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -35,24 +35,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "For store locations, press 2.",
+                    "text": "For information on returns and exchanges, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For store hours, press 1.",
-                            "is_target": false,
+                            "text": "For immediate assistance with your order, press 1 to speak with a customer service representative.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For current promotions, press 2.",
+                            "text": "For tracking your order status, press 2 to receive automated updates via SMS or email.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For frequently asked questions, press 3.",
+                            "text": "For questions about our return policy, press 3 for detailed information in our FAQ section.",
                             "is_target": false,
                             "children": []
                         }
@@ -60,24 +60,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "To hear about our upcoming promotions, press 3.",
+                    "text": "For assistance with product inquiries, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For store hours, press 1.",
+                            "text": "For tracking your order, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For store locations, press 2.",
+                            "text": "For product returns and exchanges, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To hear about our upcoming promotions, press 3.",
+                            "text": "For questions about sizing and fit, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -87,35 +87,54 @@
         },
         {
             "number": 2,
-            "text": "For information about our products, press 2.",
+            "text": "For returns and exchanges, press 2.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For assistance with product availability, press 1 to connect with a representative.",
-                    "is_target": true,
-                    "children": []
-                },
-                {
-                    "number": 2,
-                    "text": "For product pricing inquiries, press 2 to hear our automated response.",
+                    "text": "For information about our return policy, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For information about product availability, press 1.",
+                            "text": "To hear our return policy details, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For details on current promotions, press 2.",
+                            "text": "For information about exchanges, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For assistance with online orders, press 3.",
+                            "text": "To check the status of your return, press 3.",
+                            "is_target": false,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "text": "To track your return status, press 2.",
+                    "is_target": false,
+                    "children": [
+                        {
+                            "number": 1,
+                            "text": "To check our return policy, press 1.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 2,
+                            "text": "For refund processing times, press 2.",
+                            "is_target": false,
+                            "children": []
+                        },
+                        {
+                            "number": 3,
+                            "text": "To request a return label, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -123,24 +142,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "To learn about our loyalty program, press 3 to access more information.",
+                    "text": "For assistance with exchanges, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "To hear about our current promotions, press 1.",
-                            "is_target": false,
+                            "text": "To speak with a customer service representative, press 1.",
+                            "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For details on our product categories, press 2.",
+                            "text": "For exchange policy details, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To check store hours and locations, press 3.",
+                            "text": "To hear our automated FAQs about exchanges, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -150,29 +169,29 @@
         },
         {
             "number": 3,
-            "text": "For loyalty program details, press 3.",
+            "text": "For product inquiries, press 3.",
             "is_target": false,
             "children": [
                 {
                     "number": 1,
-                    "text": "For information about loyalty rewards, press 1.",
+                    "text": "For clothing inquiries, press 1.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "To speak with a customer service representative about your loyalty rewards, press 1.",
-                            "is_target": true,
+                            "text": "For inquiries about dresses, press 1.",
+                            "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For information on how to earn more loyalty points, press 2.",
+                            "text": "For inquiries about accessories, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To hear about the latest promotions and discounts for loyalty members, press 3.",
+                            "text": "For inquiries about shoes, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -180,24 +199,24 @@
                 },
                 {
                     "number": 2,
-                    "text": "To check your loyalty points balance, press 2.",
+                    "text": "For accessory inquiries, press 2.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "To hear about how to earn loyalty points, press 1.",
+                            "text": "For clothing inquiries, press 1.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "To redeem your loyalty points for discounts, press 2.",
+                            "text": "For order status, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "For FAQs regarding the loyalty program, press 3.",
+                            "text": "For returns and exchanges, press 3.",
                             "is_target": false,
                             "children": []
                         }
@@ -205,24 +224,24 @@
                 },
                 {
                     "number": 3,
-                    "text": "For assistance with your loyalty account, press 3.",
+                    "text": "For footwear inquiries, press 3.",
                     "is_target": false,
                     "children": [
                         {
                             "number": 1,
-                            "text": "For immediate assistance with your loyalty account, press 1 to speak to a customer service representative.",
+                            "text": "For immediate assistance with your footwear order, press 1 to speak with a customer service representative.",
                             "is_target": true,
                             "children": []
                         },
                         {
                             "number": 2,
-                            "text": "For information about loyalty program rewards, press 2 to hear an automated message.",
+                            "text": "To hear our latest footwear arrivals, press 2.",
                             "is_target": false,
                             "children": []
                         },
                         {
                             "number": 3,
-                            "text": "To check your loyalty account balance, press 3 for an automated response.",
+                            "text": "For information on our footwear return policy, press 3.",
                             "is_target": false,
                             "children": []
                         }
