@@ -208,31 +208,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 4,
-                    "text": "To schedule an appointment, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For grooming tips on specific breeds, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For advice on grooming products, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For frequently asked questions about grooming, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         }

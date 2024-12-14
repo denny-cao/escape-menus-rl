@@ -61,24 +61,6 @@
                             "text": "For information about treatment packages, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For information about product recommendations, press 4.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 5,
-                            "text": "To return to the main menu, press 5.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 6,
-                            "text": "To speak with a customer service agent, press 6.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -102,12 +84,6 @@
                         {
                             "number": 3,
                             "text": "To hear about our special promotions, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For information about our nail services, press 4.",
                             "is_target": false,
                             "children": []
                         }

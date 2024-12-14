@@ -86,12 +86,6 @@
                             "text": "For help with delivery issues, press 3 for more automated options.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }

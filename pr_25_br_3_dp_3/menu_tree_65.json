@@ -30,12 +30,6 @@
                             "text": "To get information on vehicle maintenance services, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To speak with a customer service representative, press 0.",
-                            "is_target": true,
-                            "children": []
                         }
                     ]
                 },

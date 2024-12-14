@@ -162,12 +162,6 @@
                             "text": "For assistance with returns and exchanges, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For sizing and fitting assistance, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }

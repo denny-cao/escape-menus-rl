@@ -124,12 +124,6 @@
                             "text": "To get updates on current promotions, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For assistance with returns, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }

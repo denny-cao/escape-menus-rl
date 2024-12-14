@@ -30,12 +30,6 @@
                             "text": "For frequently asked questions regarding appointments, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -166,12 +160,6 @@
                         {
                             "number": 3,
                             "text": "For information on our special promotions, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
                             "is_target": false,
                             "children": []
                         }

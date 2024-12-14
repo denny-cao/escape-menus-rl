@@ -137,12 +137,6 @@
                             "text": "To receive tips on selecting fresh produce, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the previous menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -248,75 +242,6 @@
                         {
                             "number": 3,
                             "text": "For estimated delivery times, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "number": 4,
-            "text": "For customer feedback and suggestions, press 4.",
-            "is_target": false,
-            "children": [
-                {
-                    "number": 1,
-                    "text": "To speak with a customer service representative about your feedback, press 1.",
-                    "is_target": true,
-                    "children": []
-                },
-                {
-                    "number": 2,
-                    "text": "For automated feedback submission, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To speak with a customer service representative about your feedback, press 1.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To hear our feedback guidelines, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For information on how we handle feedback, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 3,
-                    "text": "To hear our frequently asked questions regarding feedback, press 3.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To hear our frequently asked questions about feedback, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To leave a voicemail with your feedback, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To return to the main menu, press 3.",
                             "is_target": false,
                             "children": []
                         }

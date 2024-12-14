@@ -80,12 +80,6 @@
                             "text": "For details on our store policies, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For assistance with payment methods, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }
@@ -116,30 +110,6 @@
                         {
                             "number": 3,
                             "text": "For assistance with your account settings, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For shipping rates and options, press 4.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 5,
-                            "text": "To access our FAQs, press 5.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 6,
-                            "text": "To sign up for our newsletter, press 6.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 7,
-                            "text": "To reach our customer support via email, press 7.",
                             "is_target": false,
                             "children": []
                         }

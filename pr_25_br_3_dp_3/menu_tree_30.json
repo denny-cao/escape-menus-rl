@@ -137,12 +137,6 @@
                             "text": "To hear about our special events, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -166,31 +160,6 @@
                         {
                             "number": 3,
                             "text": "To hear our restaurant policies, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 0,
-                    "text": "To return to the main menu, press 0.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To check availability, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To modify an existing reservation, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To cancel a reservation, press 3.",
                             "is_target": false,
                             "children": []
                         }

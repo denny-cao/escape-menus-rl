@@ -244,12 +244,6 @@
                             "text": "For information on our return policy, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 0,
-                            "text": "To go back to the previous menu, press 0.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }

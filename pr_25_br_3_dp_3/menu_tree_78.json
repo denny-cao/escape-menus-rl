@@ -145,31 +145,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 4,
-                    "text": "For general inquiries about HealthFirst Clinics, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For information about our services, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To hear about our locations and hours, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For assistance with appointment scheduling, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         },

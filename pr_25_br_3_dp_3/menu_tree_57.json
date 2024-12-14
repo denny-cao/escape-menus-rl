@@ -162,12 +162,6 @@
                             "text": "To return to the main menu, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To ask about dietary restrictions menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }

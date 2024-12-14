@@ -164,31 +164,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 4,
-                    "text": "To return to the main menu, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For assistance with your order status, press 1 to speak with a customer service agent.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To get your order status through our automated system, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For detailed FAQs about order statuses, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         },

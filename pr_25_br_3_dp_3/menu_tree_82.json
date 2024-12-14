@@ -194,12 +194,6 @@
                             "text": "For information on returns and exchanges, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 0,
-                            "text": "",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

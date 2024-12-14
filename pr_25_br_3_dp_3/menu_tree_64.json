@@ -162,37 +162,6 @@
                             "text": "To check the status of your warranty, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For FAQs, press 4.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 0,
-                    "text": "",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For tracking your order status, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To change your shipping address, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For delivery issues, press 3.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }

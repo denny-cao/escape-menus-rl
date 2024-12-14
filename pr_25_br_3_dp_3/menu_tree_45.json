@@ -227,31 +227,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 0,
-                    "text": "",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For loan payment information, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For financing application status, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For interest rates and terms, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         }

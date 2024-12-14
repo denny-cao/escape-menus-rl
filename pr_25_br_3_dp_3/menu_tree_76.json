@@ -200,12 +200,6 @@
                             "text": "For appointment scheduling assistance, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For tips and tutorials, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

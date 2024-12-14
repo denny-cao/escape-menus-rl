@@ -82,31 +82,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 4,
-                    "text": "For directions to the nearest store, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For store hours, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For store locations, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For information on store policies, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         },
@@ -135,12 +110,6 @@
                         {
                             "number": 3,
                             "text": "For information on delivery times, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For further assistance, press 4.",
                             "is_target": false,
                             "children": []
                         }

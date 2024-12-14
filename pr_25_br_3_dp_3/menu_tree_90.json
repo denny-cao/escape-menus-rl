@@ -36,12 +36,6 @@
                             "text": "For assistance with your account settings, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For FAQs regarding orders, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

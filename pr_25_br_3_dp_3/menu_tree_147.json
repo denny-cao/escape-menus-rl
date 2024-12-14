@@ -131,12 +131,6 @@
                             "text": "To hear FAQs about maintenance appointments, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }
@@ -169,12 +163,6 @@
                             "text": "To update your payment information, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -200,12 +188,6 @@
                             "text": "For frequently asked questions about financing, press 3 to access our FAQs.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -229,12 +211,6 @@
                         {
                             "number": 3,
                             "text": "To hear about refinancing options, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For general inquiries, press 4.",
                             "is_target": false,
                             "children": []
                         }

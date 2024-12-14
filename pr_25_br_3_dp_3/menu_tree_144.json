@@ -208,37 +208,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 4,
-                    "text": "For our location and hours, press 4 to get automated information.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To speak with a customer service representative, press 1.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For service pricing details, press 2 to hear automated information.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To learn about our special promotions, press 3 for recorded updates.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For feedback or inquiries, press 4 to leave a message.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         }

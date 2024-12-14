@@ -36,12 +36,6 @@
                             "text": "To hear about our organic certifications, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For details on our return policy, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

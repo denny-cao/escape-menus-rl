@@ -61,18 +61,6 @@
                             "text": "For assistance with finding a specific product, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For directions to the nearest store, press 4.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 5,
-                            "text": "To return to the main menu, press 5.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

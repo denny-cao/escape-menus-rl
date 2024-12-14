@@ -36,12 +36,6 @@
                             "text": "For troubleshooting assistance, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For warranty and service options, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -147,12 +141,6 @@
                         {
                             "number": 3,
                             "text": "For assistance with product returns, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For warranty documentation, press 4.",
                             "is_target": false,
                             "children": []
                         }

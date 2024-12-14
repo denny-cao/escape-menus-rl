@@ -93,12 +93,6 @@
                             "text": "To hear our frequently asked questions about hair services, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -147,31 +141,6 @@
                         {
                             "number": 3,
                             "text": "To hear about our special makeup promotions, press 3 for a recorded message.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 4,
-                    "text": "For information on special packages, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To speak with a customer service agent, press 1.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For automated pricing details, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To hear about our latest promotions, press 3.",
                             "is_target": false,
                             "children": []
                         }

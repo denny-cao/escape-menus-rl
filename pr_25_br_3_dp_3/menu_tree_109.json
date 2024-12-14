@@ -137,12 +137,6 @@
                             "text": "For questions about our store locations and hours, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -204,12 +198,6 @@
                         {
                             "number": 3,
                             "text": "To hear about our latest promotions, press 3 for an automated message.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For help with your account, press 4 for automated support.",
                             "is_target": false,
                             "children": []
                         }

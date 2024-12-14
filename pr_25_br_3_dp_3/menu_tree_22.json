@@ -137,12 +137,6 @@
                             "text": "For FAQs related to product returns, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To speak with a customer service agent, press 0.",
-                            "is_target": true,
-                            "children": []
                         }
                     ]
                 },

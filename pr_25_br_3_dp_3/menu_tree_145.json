@@ -42,12 +42,6 @@
                             "text": "To return to the main menu, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To hear our restaurant hours, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -153,31 +147,6 @@
                         {
                             "number": 3,
                             "text": "For special events and promotions, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 4,
-                    "text": "For general inquiries, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For menu options, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For reservation inquiries, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For catering services, press 3.",
                             "is_target": false,
                             "children": []
                         }

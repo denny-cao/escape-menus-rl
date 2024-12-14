@@ -164,31 +164,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 0,
-                    "text": "To hear these options again, press 0.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For information on store hours, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For information on book availability, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For directions to our nearest location, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         },
@@ -217,12 +192,6 @@
                         {
                             "number": 3,
                             "text": "To change your shipping address, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
                             "is_target": false,
                             "children": []
                         }

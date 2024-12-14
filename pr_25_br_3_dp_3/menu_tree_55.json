@@ -118,12 +118,6 @@
                             "text": "To hear about our latest service promotions, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 0,
-                            "text": "",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

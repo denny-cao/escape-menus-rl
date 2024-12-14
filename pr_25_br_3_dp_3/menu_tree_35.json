@@ -30,12 +30,6 @@
                             "text": "To check the status of your loan, press 3 for an automated update.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -202,24 +196,6 @@
                         {
                             "number": 3,
                             "text": "To speak with an application specialist, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For vehicle order updates, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 5,
-                            "text": "To review your order history, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 6,
-                            "text": "For assistance with payment options, press 3.",
                             "is_target": false,
                             "children": []
                         }

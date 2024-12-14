@@ -164,31 +164,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 4,
-                    "text": "To go back to the main menu, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To speak with a customer service representative, press 1.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To check the status of your reservation, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For frequently asked questions about reservations, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         },
@@ -242,18 +217,6 @@
                         {
                             "number": 3,
                             "text": "To hear about our special offers, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 5,
-                            "text": "To close this menu, press 5.",
                             "is_target": false,
                             "children": []
                         }

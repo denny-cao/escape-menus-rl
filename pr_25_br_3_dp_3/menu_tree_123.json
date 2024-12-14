@@ -143,12 +143,6 @@
                             "text": "To receive updates on service specials via SMS, press 3 for more information.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For vehicle maintenance tips and advice, press 4 to access our recorded messages.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

@@ -30,12 +30,6 @@
                             "text": "To hear about our membership benefits, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For details on upcoming events, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

@@ -30,12 +30,6 @@
                             "text": "For inquiries about store hours, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 0,
-                            "text": "To return to the previous menu, press 0.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -166,30 +160,6 @@
                         {
                             "number": 3,
                             "text": "To cancel your order, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To inquire about delivery options, press 4.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 5,
-                            "text": "To get information about returns, press 5.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 6,
-                            "text": "To speak to a customer service representative, press 6.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 7,
-                            "text": "For store hours and location, press 7.",
                             "is_target": false,
                             "children": []
                         }

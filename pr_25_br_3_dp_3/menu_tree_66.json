@@ -36,12 +36,6 @@
                             "text": "To hear our frequently asked questions, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 0,
-                            "text": "",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -97,12 +91,6 @@
                         {
                             "number": 3,
                             "text": "To hear our most frequently asked questions regarding pricing, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For information on discounts and promotions, press 4.",
                             "is_target": false,
                             "children": []
                         }

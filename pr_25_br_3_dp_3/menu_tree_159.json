@@ -168,12 +168,6 @@
                             "text": "To hear about our special offers, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For hours of operation, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }

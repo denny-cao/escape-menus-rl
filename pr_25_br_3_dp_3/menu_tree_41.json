@@ -112,12 +112,6 @@
                             "text": "For inquiries about catering services, press 3 to access our menu options.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 0,
-                            "text": "",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

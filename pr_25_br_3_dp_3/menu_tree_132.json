@@ -112,12 +112,6 @@
                             "text": "For repair service details, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For warranty claims, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

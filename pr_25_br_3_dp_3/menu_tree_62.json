@@ -36,18 +36,6 @@
                             "text": "To hear about upcoming events and promotions, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To get recommendations based on your favorite genres, press 4.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 5,
-                            "text": "For help with online orders, press 5.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

@@ -80,12 +80,6 @@
                             "text": "To hear about our current promotions and specials, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To get help with your online orders, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }

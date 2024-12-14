@@ -61,12 +61,6 @@
                             "text": "To hear options for online appointment management, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For general inquiries, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

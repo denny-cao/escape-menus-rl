@@ -162,12 +162,6 @@
                             "text": "To check the status of your warranty claim, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For general inquiries about our products, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }
@@ -223,12 +217,6 @@
                         {
                             "number": 3,
                             "text": "To check the status of your warranty, press 3 for our online tracking system.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For assistance with warranty claims, press 4 to receive guidance via our FAQs.",
                             "is_target": false,
                             "children": []
                         }

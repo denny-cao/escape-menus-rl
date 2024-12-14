@@ -99,12 +99,6 @@
                             "text": "For product manuals, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 0,
-                            "text": "To return to the main menu, press 0.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -128,12 +122,6 @@
                         {
                             "number": 3,
                             "text": "For troubleshooting tips, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the main menu, press 4.",
                             "is_target": false,
                             "children": []
                         }

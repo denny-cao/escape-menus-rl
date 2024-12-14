@@ -36,18 +36,6 @@
                             "text": "For rescheduling an appointment, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For directions to our clinic, press 4.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 5,
-                            "text": "For general questions about our services, press 5.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -141,12 +129,6 @@
                         {
                             "number": 3,
                             "text": "For information on our services and locations, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For technical support with the patient portal, press 4.",
                             "is_target": false,
                             "children": []
                         }

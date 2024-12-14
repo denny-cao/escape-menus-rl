@@ -194,12 +194,6 @@
                             "text": "For cancellation policies, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For all other inquiries, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -229,88 +223,6 @@
                         {
                             "number": 3,
                             "text": "For custom order requests, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "number": 4,
-            "text": "To provide feedback, press 4.",
-            "is_target": false,
-            "children": [
-                {
-                    "number": 1,
-                    "text": "To leave feedback about your experience, press 1.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To provide feedback about your visit, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To suggest new menu items, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To report an issue with your order, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "text": "For suggestions on menu items, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For dietary restrictions, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For seasonal specials, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To inquire about catering options, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 3,
-                    "text": "To report an issue with your order, press 3.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "To leave feedback about your experience, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "To make a suggestion for menu items, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To inquire about our customer loyalty program, press 3.",
                             "is_target": false,
                             "children": []
                         }

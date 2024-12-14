@@ -124,12 +124,6 @@
                             "text": "For shipping and delivery options, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For store hours and locations, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

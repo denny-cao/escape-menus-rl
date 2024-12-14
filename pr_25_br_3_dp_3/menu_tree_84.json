@@ -36,12 +36,6 @@
                             "text": "To check the status of your order, press 3.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },
@@ -179,12 +173,6 @@
                         {
                             "number": 3,
                             "text": "To change your shipping address, press 3.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For assistance with returns, press 4.",
                             "is_target": false,
                             "children": []
                         }
