@@ -86,12 +86,6 @@
                             "text": "To check the status of your warranty claim, press 3 to access our automated system.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "To return to the previous menu, press 4.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 }
@@ -172,88 +166,6 @@
                         {
                             "number": 3,
                             "text": "For FAQs about shipping, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "number": 0,
-            "text": "To return to the main menu, press 0.",
-            "is_target": false,
-            "children": [
-                {
-                    "number": 1,
-                    "text": "For product support, press 1.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For technical support, press 1 to speak with a customer service agent.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For troubleshooting guides, press 2 to access our automated support system.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For warranty information, press 3 for recorded information on warranties.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 2,
-                    "text": "For warranty information, press 2.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For general warranty inquiries, press 1 to speak with a customer service representative.",
-                            "is_target": true,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For detailed warranty policy information, press 2 to hear our automated response.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "To check the status of your warranty claim, press 3 for an automated update.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "number": 3,
-                    "text": "For troubleshooting guides, press 3.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For general troubleshooting tips, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For device-specific troubleshooting, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For warranty and service information, press 3.",
                             "is_target": false,
                             "children": []
                         }

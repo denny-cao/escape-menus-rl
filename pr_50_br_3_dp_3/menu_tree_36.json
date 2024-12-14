@@ -30,12 +30,6 @@
                             "text": "To hear our product warranty information, press 3 for an automated message.",
                             "is_target": false,
                             "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For help with returns or exchanges, press 4 for an automated response.",
-                            "is_target": false,
-                            "children": []
                         }
                     ]
                 },

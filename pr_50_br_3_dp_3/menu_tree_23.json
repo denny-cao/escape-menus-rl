@@ -82,31 +82,6 @@
                             "children": []
                         }
                     ]
-                },
-                {
-                    "number": 4,
-                    "text": "For returning an item, press 4.",
-                    "is_target": false,
-                    "children": [
-                        {
-                            "number": 1,
-                            "text": "For tracking your order, press 1.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 2,
-                            "text": "For information on return policies, press 2.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 3,
-                            "text": "For assistance with exchanges, press 3.",
-                            "is_target": false,
-                            "children": []
-                        }
-                    ]
                 }
             ]
         },
@@ -242,12 +217,6 @@
                         {
                             "number": 3,
                             "text": "For frequently asked questions about care instructions, press 3 for more options.",
-                            "is_target": false,
-                            "children": []
-                        },
-                        {
-                            "number": 4,
-                            "text": "For product warranty details, press 4 to access our automated system.",
                             "is_target": false,
                             "children": []
                         }

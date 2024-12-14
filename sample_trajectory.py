@@ -83,7 +83,7 @@ class TrajectorySampler:
         
         self.menu_tree = MenuNode.from_dict(menu_tree_data)
         self.current_node = self.menu_tree
-        print(f"Loaded menu tree from: {selected_file}")
+        # print(f"Loaded menu tree from: {selected_file}")
     
     def reset(self) -> torch.Tensor:
         """
