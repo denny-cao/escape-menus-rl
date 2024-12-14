@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sample_trajectory import TrajectorySampler
 import utils
+import os
 
 def sample(theta, sampler, N, num_actions):
     total_rewards = []
@@ -54,4 +55,8 @@ if __name__ == '__main__':
     plt.title("Average Rewards per Iteration")
     plt.xlabel("Iteration")
     plt.ylabel("Average Rewards")
-    plt.show()
+    fig_dir = "fig"
+    os.makedirs(fig_dir, exist_ok=True)
+    
+    # Save the plot inside the 'fig' directory
+    plt.savefig(os.path.join(fig_dir, "average_rewards.png"), format="png")
