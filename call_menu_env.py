@@ -103,7 +103,7 @@ class CallMenuEnv(gym.Env):
         if len(self._get_children(self.current_node)) == 0 or self._find_target_node(self.current_node):
             done = True
 
-        reward = 100.0 if self._find_target_node(self.current_node) else -0.1 # TODO: Maybe try different reward function?
+        reward = 1.0 if self._find_target_node(self.current_node) else 0 # TODO: Maybe try different reward function?
         observation = self._get_observation()
         info = self._get_info()
         return observation, reward, done, truncated, info
