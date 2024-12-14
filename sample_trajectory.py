@@ -2,10 +2,11 @@ import json
 import os
 import random
 from typing import List, Tuple, Dict, Optional
-
+import yaml
 import torch
 from transformers import AutoTokenizer, AutoModel
 
+SPECS_PATH = "specs.yaml"
 
 class MenuNode:
     """
@@ -49,7 +50,9 @@ class TrajectorySampler:
     """
     Samples state-action trajectories from randomly selected JSON menu trees.
     """
-    def __init__(self, json_folder: str, model_name: str = "sentence-transformers/paraphrase-MiniLM-L6-v2"):
+    def __init__(self, 
+                 json_folder: str, 
+                 model_name: str = "sentence-transformers/paraphrase-MiniLM-L6-v2",):
         """
         Initialize the TrajectorySampler with a folder of JSON menu files and a BERT model.
         
@@ -57,10 +60,15 @@ class TrajectorySampler:
             json_folder (str): The path to the folder containing the JSON files.
             model_name (str): The name of the pre-trained model to load from HuggingFace.
         """
+        # Load MAX_DEPTH_TREE from the specs.yaml file
+        with open(SPECS_PATH, 'r') as file:
+            specs = yaml.safe_load(file)
+            self.max_depth = specs.get("max-depth-tree", 10) 
+    
         self.json_folder = json_folder
         self.menu_tree: Optional[MenuNode] = None  # Current active menu tree
         self.current_node: Optional[MenuNode] = None  # Current position in the tree
-        
+        self.current_level: int = 0
         # Load the BERT model and tokenizer
         print(f"Loading BERT model: {model_name}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -93,6 +101,7 @@ class TrajectorySampler:
             torch.Tensor: The BERT embedding for the initial state.
         """
         self.load_random_menu_tree()
+        self.current_level = 0
         initial_state_text = self.menu_tree.get_state_text()
         initial_state_embedding = self.get_state_embedding(initial_state_text)
         return initial_state_embedding
@@ -121,13 +130,13 @@ class TrajectorySampler:
         
         # Update the current position in the tree
         self.current_node = next_node
-        
+        self.current_level += 1
+
         # Compute the state, reward, and done flag
         state_text = self.current_node.get_state_text()
         state_embedding = self.get_state_embedding(state_text)
         reward = 1 if self.current_node.is_target else 0
         done = len(self.current_node.children) == 0  # Done if no more children
-        
         return state_embedding, reward, done
     
     def get_state_embedding(self, state_text: str) -> torch.Tensor:
@@ -141,28 +150,29 @@ class TrajectorySampler:
             torch.Tensor: The BERT embedding of the state.
         """
         if state_text in self.embedding_cache:
-            return self.embedding_cache[state_text]
+            base_embedding = self.embedding_cache[state_text]
+        else:
+            # Tokenize and encode the text
+            inputs = self.tokenizer(state_text, return_tensors="pt", padding=True, truncation=True, max_length=128)
+            with torch.no_grad():
+                outputs = self.model(**inputs)
+            base_embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze()
+            self.embedding_cache[state_text] = base_embedding
         
-        # Tokenize and encode the text
-        inputs = self.tokenizer(state_text, return_tensors="pt", padding=True, truncation=True, max_length=128)
-        
-        # Get the BERT embeddings
-        with torch.no_grad():
-            outputs = self.model(**inputs)
-        
-        # Take the mean of the token embeddings to represent the entire sentence
-        embedding = torch.mean(outputs.last_hidden_state, dim=1).squeeze()
-        
-        # Cache the embedding to avoid recomputation
-        self.embedding_cache[state_text] = embedding
-        return embedding
+        # Create a one-hot vector for the current level
+        one_hot_level = torch.zeros(self.max_depth)
+        level_index = min(self.current_level, self.max_depth - 1)  # ensure we don't go out of range
+        one_hot_level[level_index] = 1.0
 
-    def sample_trajectory(self, max_steps: int = 10) -> List[Tuple[torch.Tensor, int, int]]:
+        one_hot_level = one_hot_level.to(base_embedding.device, dtype=base_embedding.dtype)
+        combined_embedding = torch.cat((base_embedding, one_hot_level), dim=0)
+
+        return combined_embedding
+    
+
+    def sample_trajectory(self) -> List[Tuple[torch.Tensor, int, int]]:
         """
         Sample a complete trajectory by taking random actions in the menu tree.
-
-        Args:
-            max_steps (int): The maximum number of steps to sample in the trajectory.
 
         Returns:
             List[Tuple[torch.Tensor, int, int]]: 
@@ -172,7 +182,7 @@ class TrajectorySampler:
         trajectory = []
         trajectory.append((self.current_node.get_state_text()))
 
-        for _ in range(max_steps):
+        for _ in range(self.max_steps):
             if self.current_node is None or len(self.current_node.children) == 0:
                 break  # End if no children exist
             

@@ -1,1 +1,3 @@
-max-depth-tree = 3
+# specs.yaml
+
+max-depth-tree: 10
