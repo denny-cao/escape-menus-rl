@@ -54,8 +54,8 @@ def train(N, T, delta, sampler, lamb=1e-3):
 
 
 if __name__ == '__main__':
-    sampler = TrajectorySampler(json_folder="pr_50_br_3_dp_3")  # Use sampler
-    theta, episode_rewards = train(N=1000, T=200, delta=1e-5, sampler=sampler)
+    sampler = TrajectorySampler(json_folder="pr_75_br_3_dp_3")  # Use sampler
+    theta, episode_rewards = train(N=200, T=100, delta=1e-5, sampler=sampler)
     plt.plot(episode_rewards)
     plt.title("Average Rewards per Timestep")
     plt.xlabel("Timestep")

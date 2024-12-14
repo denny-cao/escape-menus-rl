@@ -77,7 +77,7 @@ def clean_json_files_in_folder(folder_path: str, output_folder: str = None) -> N
 
 if __name__ == "__main__":
     # Specify the folder path where JSON files are located
-    input_folder = "pr_50_br_3_dp_3"
-    output_folder = "pr_50_br_3_dp_3"
+    input_folder = "pr_75_br_3_dp_3"
+    output_folder = "pr_75_br_3_dp_3"
     
     clean_json_files_in_folder(input_folder, output_folder)
